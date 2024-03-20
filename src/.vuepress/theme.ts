@@ -4,97 +4,80 @@ import sidebar from "./sidebar.js";
 import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
-  hostname: "https://mister-hope.github.io",
+  hostname: "http://gislogic.cn",
 
   author: {
-    name: "Mr.Hope",
-    url: "https://mister-hope.com",
+    name: "今儿有劲儿了",
+    url: "http://gislogic.cn",
   },
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: "https://theme-hope-assets.vuejs.press/logo.svg",
-
-  repo: "vuepress-theme-hope/vuepress-theme-hope",
+  // logo: "https://theme-hope-assets.vuejs.press/logo.svg",
+  //
+  // repo: "vuepress-theme-hope/vuepress-theme-hope",
 
   docsDir: "src",
 
-  // 导航栏
   navbar,
 
-  // 侧边栏
   sidebar,
 
   // 页脚
-  footer: "默认页脚",
+  // footer: "默认页脚",
   displayFooter: true,
 
-  // 博客相关
   blog: {
-    description: "一个前端开发者",
+    description: "一条咸鱼GISer",
     intro: "/intro.html",
     medias: {
-      Baidu: "https://example.com",
-      BiliBili: "https://example.com",
-      Bitbucket: "https://example.com",
-      Dingding: "https://example.com",
-      Discord: "https://example.com",
-      Dribbble: "https://example.com",
-      Email: "mailto:info@example.com",
-      Evernote: "https://example.com",
-      Facebook: "https://example.com",
-      Flipboard: "https://example.com",
-      Gitee: "https://example.com",
-      GitHub: "https://example.com",
-      Gitlab: "https://example.com",
-      Gmail: "mailto:info@example.com",
-      Instagram: "https://example.com",
-      Lark: "https://example.com",
-      Lines: "https://example.com",
-      Linkedin: "https://example.com",
-      Pinterest: "https://example.com",
-      Pocket: "https://example.com",
-      QQ: "https://example.com",
-      Qzone: "https://example.com",
-      Reddit: "https://example.com",
-      Rss: "https://example.com",
-      Steam: "https://example.com",
-      Twitter: "https://example.com",
-      Wechat: "https://example.com",
-      Weibo: "https://example.com",
-      Whatsapp: "https://example.com",
-      Youtube: "https://example.com",
-      Zhihu: "https://example.com",
-      MrHope: ["https://mister-hope.com", MR_HOPE_AVATAR],
+      // Baidu: "https://example.com",
+      BiliBili: "https://space.bilibili.com/398528203/",
+      // Bitbucket: "https://example.com",
+      // Dingding: "https://example.com",
+      // Discord: "https://example.com",
+      // Dribbble: "https://example.com",
+      Email: "mailto:1352253543@qq.com",
+      // Evernote: "https://example.com",
+      // Facebook: "https://example.com",
+      // Flipboard: "https://example.com",
+      // Gitee: "https://example.com",
+      GitHub: "https://github.com/XiaoYang943",
+      // Gitlab: "https://example.com",
+      // Gmail: "mailto:info@example.com",
+      // Instagram: "https://example.com",
+      // Lark: "https://example.com",
+      // Lines: "https://example.com",
+      // Linkedin: "https://example.com",
+      // Pinterest: "https://example.com",
+      // Pocket: "https://example.com",
+      // QQ: "https://example.com",
+      // Qzone: "https://example.com",
+      // Reddit: "https://example.com",
+      // Rss: "https://example.com",
+      Steam: "https://steamcommunity.com/profiles/76561198853138344",
+      // Twitter: "https://example.com",
+      // Wechat: "https://example.com",
+      // Weibo: "https://example.com",
+      // Whatsapp: "https://example.com",
+      // Youtube: "https://example.com",
+      Zhihu: "https://www.zhihu.com/people/1352253543",
+      // MrHope: ["https://mrhope.site", MR_HOPE_AVATAR],
     },
   },
-
-  // 加密配置
+// comment: false,   // 当前页面是否开启评论功能。
+  lastUpdated: false, // 是否显示最后更新时间。
+  // editLinkfalse: false,  // 是否显示编辑链接。
+  contributors: false,  // 是否显示贡献者。
   encrypt: {
     config: {
       "/demo/encrypt.html": ["1234"],
     },
   },
-
-  // 多语言配置
-  metaLocales: {
-    editLink: "在 GitHub 上编辑此页",
-  },
-
-  // 如果想要实时查看任何改变，启用它。注: 这对更新性能有很大负面影响
-  // hotReload: true,
-
-  // 在这里配置主题提供的插件
+  // 配置主题提供的插件
   plugins: {
-    blog: true,
-
-    // 在启用之前需要安装 @waline/client
-    // 警告: 这是一个仅供演示的测试服务器，在生产环境中请自行部署并使用自己的服务器！
-    // comment: {
-    //   provider: "Waline",
-    //   serverURL: "https://waline-comment.vuejs.press",
-    // },
-
+    blog: true, // 开启博客功能
+    searchPro: true,  // 搜索框
     components: {
       components: ["Badge", "VPCard"],
     },

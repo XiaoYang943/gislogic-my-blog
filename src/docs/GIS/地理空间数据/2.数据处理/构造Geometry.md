@@ -1,0 +1,61 @@
+---
+title: 构造Geometry
+article: true
+category:
+  - GIS
+  - 地理空间数据
+  - 数据处理
+---
+## 构造圆Geometry
+### GeoTools+JTS使用buffer构造圆
+```java
+import org.geotools.geometry.jts.JTS;
+import org.geotools.referencing.CRS;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.geom.GeometryFactory;
+import org.locationtech.jts.geom.Point;
+import org.opengis.referencing.FactoryException;
+import org.opengis.referencing.crs.CRSAuthorityFactory;
+import org.opengis.referencing.crs.CoordinateReferenceSystem;
+import org.opengis.referencing.operation.MathTransform;
+import org.opengis.referencing.operation.TransformException;
+
+
+public class CreateGeometryUtil {
+    private static final GeometryFactory geometryFactory = new GeometryFactory();
+
+    /**
+     * 创建圆
+     *
+     * @param longitude   圆心经度
+     * @param latitude    圆心纬度
+     * @param radius      半径(单位：米)
+     * @param circleSides 圆的边个数
+     * @return Geometry
+     * 如果传入的半径的单位是长度，则必须先转为3857，再带入半径计算 buffer 圆
+     * 情况1. 先将4326圆心点转换为3857，再计算 buffer
+     * 结果：底图为4326坐标系中，圆是矮胖的椭圆，而底图为3857坐标系中，圆为正圆
+     * 情况2. 若直接使用4326的圆心点计算 buffer：
+     * 结果：底图为4326坐标系中，圆是正圆，而底图为3857坐标系中，圆为瘦高的椭圆
+     */
+    public static Geometry createCircleGeom(double longitude, double latitude, double radius, Integer circleSides) {
+        Coordinate circleCenterPointCoord = new Coordinate(longitude, latitude);
+        Point circleCenterPoint = geometryFactory.createPoint(circleCenterPointCoord);  // 圆心点
+        CRSAuthorityFactory factory = CRS.getAuthorityFactory(true);
+        try {
+            CoordinateReferenceSystem crs4326 = factory.createCoordinateReferenceSystem("EPSG:4326");
+            CoordinateReferenceSystem crs3857 = factory.createCoordinateReferenceSystem("EPSG:3857");
+            MathTransform transformTo3857 = CRS.findMathTransform(crs4326, crs3857);
+            Geometry circleCenterPoint3857 = JTS.transform(circleCenterPoint, transformTo3857);
+            Geometry buffer3857 = circleCenterPoint3857.buffer(radius, circleSides);  // buffer计算缓冲区圆，传入的半径的单位是：米
+            MathTransform transformTo4326 = CRS.findMathTransform(crs3857, crs4326);
+            return JTS.transform(buffer3857, transformTo4326);    // 再将计算出的 buffer 圆转换为4326;
+        } catch (FactoryException | TransformException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+}
+```
+

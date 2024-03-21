@@ -1,0 +1,107 @@
+---
+title: GeoPackage数据结构
+category:
+  - GIS
+  - 多源数据融合
+---
+## GeoPackage
+- 是一种开源的空间数据格式，文件以.gpkg结尾。一个.gpkg文件就是一个sqlite数据库
+- 作用
+    - 常用作空间数据的传输和复制
+- [GeoPackage官网](https://www.geopackage.org/)
+- [sqlitebrowser官网](https://sqlitebrowser.org/)
+- [GeoPackage的实现](http://www.geopackage.org/implementations.html)
+## 特点
+- 最大数据量为140TB
+- 同时支持矢量数据和栅格数据
+- 支持存储多个种类的多个图层数据
+- 完整的SQL能力
+- 单文件形式，便于传输
+- 可扩展性
+## 内部结构
+- 和关系数据库相同，GeoPackage包含两类表
+    - 用户定义的数据表
+    - 元数据表
+        - 原生的元数据表
+            - gpkg_contents
+            - gpkg_spatial_ref_sys
+### 点类型表结构
+![内部结构](https://blog-image-9943.oss-cn-beijing.aliyuncs.com/202309061331331.png)
+### gpkg_contents
+- 存储元数据，即gpkg的总体内容描述
+- 字段
+    - `table_name`表名，通常是该表的主键
+    - `data_type`数据类型
+        - tile栅格数据
+        - features矢量数据
+        - attribute属性数据
+        - 可自定义扩展
+    - `identifier`、`tile`、`description`说明和描述
+    - `last_change`数据最后修改时间
+    - `min`、`max`数据范围
+    - `srs_id`坐标系的id
+
+### gpkg_spatial_ref_sys
+- 存储坐标系信息
+- 字段
+    - `srs_name`、`description`坐标系的名称和描述
+    - `srs_id`坐标系的id
+        - 4326：WGS84
+        - 0: 未知的地理坐标系
+        - -1：未知的笛卡尔坐标系
+    - `organization`坐标系定义，例如EPSG或epsg
+    - `organization_coordsys_id`坐标系的数字id
+    - `definition`坐标系的WKT描述
+## 矢量数据的存储模型
+- 使用gpkg_geometry_columns表存储矢量数据的矢量信息
+  ![矢量数据的存储模型](https://blog-image-9943.oss-cn-beijing.aliyuncs.com/202309011637759.png)
+### gpkg_geometry_columns
+- 字段
+    - `table_name`矢量数据表名
+    - `column_name`矢量数据表中几何字段的名称
+    - `geometry_column_name`几何类型的名称
+    - `srs_id`坐标系id
+    - `z`矢量数据的高程、深度信息
+    - `m`矢量数据的其他维度的信息
+- 几何信息使用二进制大对象BLOB字段类型存储
+- 需要一个主键
+## 栅格数据的存储模型
+![栅格数据的存储模型](https://blog-image-9943.oss-cn-beijing.aliyuncs.com/202309011645715.png)
+- 支持的栅格数据格式
+    - PNG
+        - 无损压缩机制，更适合存储矢量地图栅格
+        - 支持Alpha波段的透明设置，使得栅格的边缘区域有更好的可视化效果
+    - JPEG
+        - 更好的压缩比，更适合存储图像数据栅格
+### gpkg_tile_matrix_set
+- 存储栅格地理范围信息
+- 字段
+    - `table_name`
+    - `srs_id`
+    - `min`、`max`数据范围
+### gpkg_tile_matrix
+- 存储栅格金字塔信息
+- 字段
+    - `table_name`
+    - `zoom_level`栅格的缩放级别
+    - `matrix_width`当前级别一共有多少列栅格
+    - `matrix_height`当前级别一共有多少行栅格
+    - `pixel_x_size`栅格的像素宽度
+    - `pixel_x_size`栅格的像素高度
+### sample_tile_pyramid
+- 存储栅格数据
+- 字段
+    - `id`表的主键
+    - `zoom_level`当前栅格的缩放级别
+    - `tile_column`当前栅格的列号
+    - `tile_row`当前栅格的行号
+    - `tile_data`BLOB存储栅格数据
+## 扩展机制
+- 除了矢量和栅格数据，GeoPackage还具有定义明确的扩展机制来支持不属于核心标准的用例。
+- GeoPackage的扩展是一组一个或多个实现，他们可以描述/扩展GeoPackage标准中的现有实现或添加新的视线
+- 对现有实现的扩展包括添加新的几何对象类型、增强SQL几何对象运算函数和对其他图像格式的支持等
+    - 新的实现包括空间索引、触发器、附加表、其他BLOB类型编码和其他SQL函数等
+- 扩展类型
+    - OGC注册扩展
+    - 社区扩展
+- gpkg_extensions表

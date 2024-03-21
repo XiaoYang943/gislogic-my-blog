@@ -5,7 +5,7 @@ import { MR_HOPE_AVATAR } from "./logo.js";
 
 export default hopeTheme({
   hostname: "http://gislogic.cn",
-
+  hotReload:true, // 热更新
   author: {
     name: "今儿有劲儿了",
     url: "http://gislogic.cn",

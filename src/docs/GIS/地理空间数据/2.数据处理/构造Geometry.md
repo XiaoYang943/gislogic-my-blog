@@ -58,4 +58,28 @@ public class CreateGeometryUtil {
     }
 }
 ```
-
+## 计算二阶贝塞尔曲线
+```java
+/**
+ * 计算二阶贝塞尔曲线
+ *
+ * @param startPoint   起始点
+ * @param controlPoint 控制点
+ * @param endPoint     终点
+ * @param num          构成曲线的点的数量
+ */
+public static LineString getCubicBezierCurve(Point startPoint, Point controlPoint, Point endPoint, Integer num) {
+    GeometryFactory geometryFactory = new GeometryFactory(new PrecisionModel(), 4326);
+    List<Coordinate> coordinates = new ArrayList<>();
+    for (int i = 0; i <= num; i++) {
+        double t = i / new Double(num);
+        double x = (Math.pow(1 - t, 2) * startPoint.getX() + 2 * t * (1 - t) * controlPoint.getX() + Math.pow(t, 2) * endPoint.getX());
+        double y = (Math.pow(1 - t, 2) * startPoint.getY() + 2 * t * (1 - t) * controlPoint.getY() + Math.pow(t, 2) * endPoint.getY());
+        Coordinate coordinate = new Coordinate();
+        coordinate.setX(x);
+        coordinate.setY(y);
+        coordinates.add(coordinate);
+    }
+    return geometryFactory.createLineString(coordinates.toArray(new Coordinate[coordinates.size()]));
+}
+```

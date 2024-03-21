@@ -1,9 +1,7 @@
 ---
 title: Polygon首尾要闭合
-article: true
 category:
   - GIS
-  - 地理空间数据
   - 数据质检
 ---
 ## Polygon首尾要闭合

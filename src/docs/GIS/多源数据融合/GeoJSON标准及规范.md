@@ -1,9 +1,7 @@
 ---
 title: GeoJSON标准及规范
-article: true
 category:
   - GIS
-  - 地理空间数据
   - 多源数据融合
 ---
 ## RFC7946规范

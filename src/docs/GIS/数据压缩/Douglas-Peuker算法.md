@@ -1,9 +1,7 @@
 ---
 title: Douglas-Peuker算法
-article: true
 category:
   - GIS
-  - 地理空间数据
   - 空间数据组织算法
   - 数据压缩
 ---

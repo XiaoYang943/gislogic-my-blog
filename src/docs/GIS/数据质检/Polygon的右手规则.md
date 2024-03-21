@@ -1,9 +1,7 @@
 ---
 title: Polygon的右手规则
-article: true
 category:
   - GIS
-  - 地理空间数据
   - 数据质检
 ---
 

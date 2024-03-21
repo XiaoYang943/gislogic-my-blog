@@ -1,70 +1,13 @@
 ---
-title: 数据质检
+title: Polygon的右手规则
 article: true
 category:
   - GIS
   - 地理空间数据
-  - 数据处理
   - 数据质检
 ---
-## 判断几何的真实类型，是线还是面
-```java
-/**
- * 判断几何的真实类型，是线还是面
- *
- * @param coordinates 坐标
- * @return 几何类型
- * 某些数据是闭合的面 Polygon，但是kml中是 LineString
- */
-public static String judgeIsLinestringOrPolygon(List<Coordinate> coordinates) {
-    if (coordinates.size() == 0) return "";
-    Coordinate startCoordinate = coordinates.get(0);
-    double startX = startCoordinate.getX();
-    double startY = startCoordinate.getY();
 
-    Coordinate endCoordinate = coordinates.get(coordinates.size() - 1);
-    double endX = endCoordinate.getX();
-    double endY = endCoordinate.getY();
-
-    if (startX == endX && startY == endY) {
-        return GeometryEnum.POLYGON;
-    } else {
-        return GeometryEnum.LINESTRING;
-    }
-}
-```
-## 修复 Polygon 首尾不闭合的情况
-```java
-/**
- * 修复 Polygon 首尾不闭合的情况
- *
- * @param coordinates
- * @return 解决以下报错:java.lang.IllegalArgumentException: Points of LinearRing do not form a closed linestring
- */
-public static boolean fixPolygonCoordinates(List<Coordinate> coordinates) {
-    if (coordinates.size() == 0) return false;
-
-    Coordinate startCoordinate = coordinates.get(0);
-    double startX = startCoordinate.getX();
-    double startY = startCoordinate.getY();
-
-    Coordinate endCoordinate = coordinates.get(coordinates.size() - 1);
-    double endX = endCoordinate.getX();
-    double endY = endCoordinate.getY();
-
-    if (startX != endX || startY != endY) {
-        // 非闭合
-        coordinates.add(startCoordinate);
-        return true;
-    } else if (startX == endX && startY == endY) {
-        // 闭合
-        return true;
-    }
-
-    return false;
-}
-```
-## 让 Polygon 遵循右手规则
+## Polygon的右手规则
 ```java
 /**
  * 让 Polygon 遵循右手规则

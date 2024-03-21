@@ -1,10 +1,10 @@
 ---
-title: Shapefile数据结构
+title: Shapefile文件格式
 article: true
 category:
   - GIS
   - 地理空间数据
-  - Shapefile
+  - 多源数据融合
 ---
 ## Shapefile
 - 文件结构

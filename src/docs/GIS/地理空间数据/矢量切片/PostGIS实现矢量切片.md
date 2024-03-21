@@ -5,7 +5,6 @@ category:
   - GIS
   - 地理空间数据
   - 矢量切片
-  - PostGIS
 ---
 ## [ST_TileEnvelope](https://postgis.net/docs/manual-dev/ST_TileEnvelope.html)
 ### 函数签名

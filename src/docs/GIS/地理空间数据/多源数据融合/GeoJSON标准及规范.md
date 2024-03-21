@@ -4,7 +4,7 @@ article: true
 category:
   - GIS
   - 地理空间数据
-  - GeoJSON
+  - 多源数据融合
 ---
 ## RFC7946规范
 ### [数据类型](https://www.rfc-editor.org/rfc/rfc7946#section-1.4)

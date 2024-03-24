@@ -13,3 +13,8 @@ export default defineUserConfig({
   // 和 PWA 一起启用
   // shouldPrefetch: false,
 });
+
+/**
+ * Spring Vue.js JAVA JavaScript Docker Mybatis MySQL Nginx Redis PostgreSQL HTTP
+ */
+

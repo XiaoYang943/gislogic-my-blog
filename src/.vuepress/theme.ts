@@ -127,7 +127,7 @@ export default hopeTheme({
       // gfm: true,
 
       // 在启用之前安装 katex
-      // katex: true,
+      katex: true,  // 支持TEX语法
 
       // 在启用之前安装 mathjax-full
       // mathjax: true,

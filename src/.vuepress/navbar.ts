@@ -7,4 +7,9 @@ export default navbar([
     icon: "edit",
     link: "/docs/GIS/首页",
   },
+  {
+    text: "笔记",
+    icon: "edit",
+    link: "/docs/notes/首页",
+  },
 ]);

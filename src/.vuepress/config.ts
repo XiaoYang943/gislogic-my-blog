@@ -1,6 +1,6 @@
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-
+import { componentsPlugin } from "vuepress-plugin-components";
 export default defineUserConfig({
   base: "/",
 
@@ -12,6 +12,11 @@ export default defineUserConfig({
 
   // 和 PWA 一起启用
   // shouldPrefetch: false,
+  plugins:[
+    componentsPlugin({
+      components:["VPBanner","VPCard"]
+    }),
+  ]
 });
 
 /**

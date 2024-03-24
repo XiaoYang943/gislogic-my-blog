@@ -206,4 +206,7 @@ export default hopeTheme({
     //   },
     // },
   },
+},{
+  // 支持自定义Layout
+  custom: true
 });

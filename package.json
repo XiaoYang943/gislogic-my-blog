@@ -3,22 +3,27 @@
   "version": "1.0.0",
   "description": "gislogic-my-blog",
   "license": "MIT",
-  "type": "module",
   "scripts": {
-    "docs:dev": "vuepress-vite dev src",
-    "docs:build": "vuepress-vite build src",
+    "docs:dev": "npx ts-node ./src/.vuepress/script.ts && vuepress-vite dev src",
+    "docs:build": "npx ts-node ./src/.vuepress/script.ts && vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
     "docs:update-package": "npx vp-update"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.8",
     "katex": "^0.16.9",
+    "mermaid": "^10.9.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.3",
     "vue": "^3.4.16",
     "vuepress": "2.0.0-rc.8",
     "vuepress-plugin-search-pro": "^2.0.0-rc.31",
     "vuepress-theme-hope": "2.0.0-rc.31"
   },
   "dependencies": {
-    "@vuepress/client": "^2.0.0-rc.8"
+    "@vuepress/client": "^2.0.0-rc.8",
+    "glob": "^10.3.10",
+    "markmap-lib": "^0.16.1",
+    "markmap-render": "^0.16.0"
   }
 }

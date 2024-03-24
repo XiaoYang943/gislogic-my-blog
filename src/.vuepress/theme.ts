@@ -126,14 +126,12 @@ export default hopeTheme({
       // gfm requires mathjax-full to provide tex support
       // gfm: true,
 
-      // 在启用之前安装 katex
-      katex: true,  // 支持TEX语法
+      katex: true,  // TEX语法
 
       // 在启用之前安装 mathjax-full
       // mathjax: true,
 
-      // 在启用之前安装 mermaid
-      // mermaid: true,
+      mermaid: true,  // Mermaid 图表
 
       // playground: {
       //   presets: ["ts", "vue"],

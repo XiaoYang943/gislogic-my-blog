@@ -7,7 +7,8 @@
     "docs:dev": "npx ts-node ./src/.vuepress/script.ts && vuepress-vite dev src",
     "docs:build": "npx ts-node ./src/.vuepress/script.ts && vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
-    "docs:update-package": "npx vp-update"
+    "docs:update-package": "npx vp-update",
+    "docs:update-markmap": "npx ts-node ./src/.vuepress/script.ts"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.8",

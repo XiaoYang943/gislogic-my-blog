@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "docs:dev": "npx ts-node ./src/.vuepress/script.ts && vuepress-vite dev src",
-    "docs:build": "npx ts-node ./src/.vuepress/script.ts && vuepress-vite build src",
+    "docs:build": "vuepress-vite build src",
     "docs:clean-dev": "vuepress-vite dev src --clean-cache",
     "docs:update-package": "npx vp-update",
     "docs:update-markmap": "npx ts-node ./src/.vuepress/script.ts"

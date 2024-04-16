@@ -28,6 +28,8 @@ isMarkmap: true
 ### 计算几何
 #### 三角剖分
 - [earcut.js](https://github.com/mapbox/earcut)
+#### 计算面的中心
+- [polylabel](https://github.com/mapbox/polylabel)
 ## 数据格式
 ### GeoJSON
 - [官网](https://geojson.org/)

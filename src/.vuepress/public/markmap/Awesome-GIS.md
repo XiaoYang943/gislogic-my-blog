@@ -75,6 +75,7 @@ isMarkmap: true
 - [GeoServer](https://github.com/geoserver/geoserver)
 - [geoserver-manager](https://github.com/geosolutions-it/geoserver-manager)
 - [geoserver-cloud](https://github.com/geoserver/geoserver-cloud)
+- [https://github.com/ngageoint/elasticgeo](elasticgeo)
 ### 切片
 - [geowebcache](https://github.com/GeoWebCache/geowebcache)
 ## 小工具
@@ -85,6 +86,11 @@ isMarkmap: true
 - [easy-gis-demo](https://github.com/houzw/easy-gis-demo/tree/master)
 - [mapbox-offline-server](https://github.com/qmjy/mapbox-offline-server)
 - [gis](https://github.com/jimnewpower/gis)
+- [lzugis](https://github.com/lzuniujp08/lzugis)
+- [geoprocessing-service](https://github.com/yyx626/geoprocessing-service)
+- [GIS-Utilities](https://github.com/bradtom/GIS-Utilities)
+- [geometry-grid](https://github.com/meethigher/geometry-grid)
+- [Equivalent-surface](https://github.com/lzuniujp08/Equivalent-surface)
 ### 内存中管理和查询空间数据
 - [geo-assist](https://github.com/thegeekyasian/geo-assist)
 ## 坐标转换

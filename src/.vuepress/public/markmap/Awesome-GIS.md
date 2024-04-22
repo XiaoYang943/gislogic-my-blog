@@ -65,6 +65,8 @@ isMarkmap: true
 ### 格网
 - [GridMaker](https://github.com/eurostat/GridMaker)
 - [GridIndexAndRangeQueryDemo](https://github.com/xdlwd086/GridIndexAndRangeQueryDemo)
+### 四叉树
+- [quadkey](https://github.com/stumpyfr/quadkey)
 ## 标准
 ### OGC
 - [官网](https://www.ogc.org/)
@@ -78,6 +80,7 @@ isMarkmap: true
 - [https://github.com/ngageoint/elasticgeo](elasticgeo)
 ### 切片
 - [geowebcache](https://github.com/GeoWebCache/geowebcache)
+- [global-mercator:TMS的js工具库](https://github.com/DenisCarriere/global-mercator)
 ## 小工具
 ### 平台
 - [geo-platform](https://github.com/geosdi/geo-platform)

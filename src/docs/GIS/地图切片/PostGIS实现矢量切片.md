@@ -2,7 +2,7 @@
 title: PostGIS实现矢量切片
 category:
   - GIS
-  - 矢量切片
+  - 地图切片
 ---
 ## [ST_TileEnvelope](https://postgis.net/docs/manual-dev/ST_TileEnvelope.html)
 ### 函数签名

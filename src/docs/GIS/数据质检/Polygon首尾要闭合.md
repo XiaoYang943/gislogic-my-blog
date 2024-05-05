@@ -1,7 +1,7 @@
 ---
 title: Polygon首尾要闭合
 category:
-  - 待归档
+  - GIS
   - 数据质检
 ---
 ## Polygon首尾要闭合

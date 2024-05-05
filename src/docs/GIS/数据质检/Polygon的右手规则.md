@@ -1,7 +1,7 @@
 ---
 title: Polygon的右手规则
 category:
-  - 待归档
+  - GIS
   - 数据质检
 ---
 

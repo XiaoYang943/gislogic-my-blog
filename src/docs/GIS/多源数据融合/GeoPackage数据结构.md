@@ -1,7 +1,7 @@
 ---
 title: GeoPackage数据结构
 category:
-  - 待归档
+  - GIS
   - 多源数据融合
 ---
 ## GeoPackage

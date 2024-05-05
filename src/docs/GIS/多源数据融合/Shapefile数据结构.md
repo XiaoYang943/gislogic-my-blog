@@ -1,7 +1,7 @@
 ---
 title: Shapefile文件格式
 category:
-  - GIS
+  - 待归档
   - 多源数据融合
 ---
 ## Shapefile

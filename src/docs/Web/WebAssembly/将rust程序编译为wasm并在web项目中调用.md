@@ -5,8 +5,8 @@ category:
   - Rust
 ---
 
-::: tips
-- 环境
+:::tip
+- 环境如下
   - windows64
   - rust、cargo`1.77.2`
 :::

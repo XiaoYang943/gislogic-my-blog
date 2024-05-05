@@ -1,7 +1,7 @@
 ---
 title: MVT标准(译)
 category:
-  - GIS
+  - 待归档
   - 矢量瓦片
   - MVT
 ---

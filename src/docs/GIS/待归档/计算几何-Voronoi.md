@@ -2,7 +2,7 @@
 title: 计算几何-Voronoi
 article: false
 category:
-  - GIS
+  - 待归档
   - 计算几何
   - Voronoi
 ---

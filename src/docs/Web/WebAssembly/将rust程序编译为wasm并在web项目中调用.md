@@ -20,7 +20,7 @@ category:
 - `cargo check`
 ## step4.编写rust程序
 - 参考程序[wasm-bindgen](https://github.com/rustwasm/wasm-bindgen#example)
-:::rust
+```rust
 use wasm_bindgen::prelude::*;
 
 // Import the `window.alert` function from the Web.
@@ -35,7 +35,7 @@ fn alert(s: &str);
 pub fn greet(name: &str) {
 alert(&format!("Hello, {}!", name));
 }
-:::
+```
 ## step5.打包编译
 - 参考[wasm-pack-build](https://rustwasm.github.io/docs/wasm-pack/commands/build.html#wasm-pack-build)
   - `wasm-pack build --target web`
@@ -49,7 +49,7 @@ alert(&format!("Hello, {}!", name));
   - 解决
     - 安装`cargo install wasm-bindgen-cli`
 ## step6.新建vite-vue项目
-...
+- 略
 ## step7.安装wasm包
 - 把打包生成的**pkg**文件夹拷贝到vite项目根目录下，执行`npm install .\pkg\`
 ## step8.es6调用wasm

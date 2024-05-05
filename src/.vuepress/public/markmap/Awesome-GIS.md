@@ -36,6 +36,8 @@ isMarkmap: true
 - [planar_algorithm](https://github.com/huifer/planar_algorithm)
 - [algorithm-in-gis](https://github.com/hulongping/algorithm-in-gis)
 ## 数据格式
+### Shp
+- [标准](https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf)
 ### GeoJSON
 - [官网](https://geojson.org/)
 - [RFC 7946标准](https://datatracker.ietf.org/doc/html/rfc7946)
@@ -50,7 +52,12 @@ isMarkmap: true
 - [geopackage-java](https://github.com/ngageoint/geopackage-java)
 ### CityGML
 - [citygml4j](https://github.com/citygml4j/citygml4j)
+### MVT
+- [vector-tile-spec](https://github.com/mapbox/vector-tile-spec)
+- [vector-tiles-standards](https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/)
 ## 数据编码方式
+### protocol-buffers
+- [官网](https://protobuf.dev/overview/)
 ### GeoBuf
 - [GitHub](https://github.com/mapbox/geobuf)
 ### FlatGeoBuf
@@ -69,7 +76,9 @@ isMarkmap: true
 ### OGC
 - [官网](https://www.ogc.org/)
 - [规范](https://www.ogc.org/standards/)
+- [ogcapi](https://ogcapi.ogc.org/)
 - [GitHub](https://github.com/opengeospatial)
+- [e-learning](https://opengeospatial.github.io/e-learning/)
 ## 服务
 ### GeoServer
 - [GeoServer](https://github.com/geoserver/geoserver)
@@ -101,3 +110,5 @@ isMarkmap: true
 - [lambert-java](https://github.com/yageek/lambert-java)
 ### 地理坐标计算所属时区
 - [timeshape](https://github.com/RomanIakovlev/timeshape)
+## 论坛
+- [stackexchange](https://gis.stackexchange.com/)

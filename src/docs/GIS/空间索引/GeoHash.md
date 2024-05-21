@@ -76,11 +76,6 @@ category:
 ### 经纬度二进制转Base32编码
 - 30bit位经纬度二进制，五个bit为一组，分别转为十进制，得到六个十进制数值
 - 根据如下十进制数值与Base32编码的[码表](https://en.wikipedia.org/wiki/Geohash#Typical_and_main_usages)，将六个十进制数值转为六个Base32编码，组合起来就是六位的GeoHash编码
-  十进制数值0	1	2	3	4	5	6	7	8	9	10	11	12	13	14	15
-  Base 32	0	1	2	3	4	5	6	7	8	9	b	c	d	e	f	g
-
-十进制数值16	17	18	19	20	21	22	23	24	25	26	27	28	29	30	31
-Base 32	h	j	k	m	n	p	q	r	s	t	u	v	w	x	y	z
 ## 参考
 - [wiki/Geohash](https://en.wikipedia.org/wiki/Geohash)
 - [在线转换](http://geohash.org/)

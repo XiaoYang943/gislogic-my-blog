@@ -1,10 +1,10 @@
 ---
-title: Mapbox-Vector-Tile标准(译)
+title: Protocol Buffers
 category:
   - GIS
   - 地图切片
   - Mapbox-Vector-Tile
-  - ProtocolBuffers
+  - Protocol Buffers
 ---
 ## 什么是Protocol Buffers
 - Protocol Buffers(PBF)是一种与编程语言无关、与平台架构无关、可扩展性强的**序列化数据**机制
@@ -39,6 +39,7 @@ message Person {
 ```
 ### 3. 编译.proto
 - 编译命令`protoc.exe --java_out=./ PersonMsg.proto`
+  - 或者IDEA安装`Protocol Buffers`和`GenProtobuf`插件，IDEA菜单栏-Tools-设置GenProtobuf-设置protoc.exe路径及java语言-右键.proto文件生成protobuf
 - 编译`.proto`后，会创建一个java类，可以使用该类来创建新实例
 ### 4. 创建新的示例并序列化
 ```java

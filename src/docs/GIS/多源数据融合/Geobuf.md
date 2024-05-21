@@ -3,6 +3,9 @@ title: Geobuf
 category:
   - GIS
   - 多源数据融合
+  - 数据格式
+  - GeoJSON
+  - Geobuf
 ---
 ## Geobuf
 - [官网](https://github.com/mapbox/geobuf)

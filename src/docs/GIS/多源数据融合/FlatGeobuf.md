@@ -3,6 +3,9 @@ title: FlatGeobuf
 category:
   - GIS
   - 多源数据融合
+  - 数据格式
+  - Geobuf
+  - FlatGeobuf
 ---
 ## FlatGeobuf
 ### 是什么

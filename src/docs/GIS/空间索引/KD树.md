@@ -1,8 +1,9 @@
 ---
-title: 空间索引
+title: KD树
 category:
   - GIS
-  - 地理空间数据索引
+  - 空间索引
+  - KD树
 ---
 ## KD树
 ### 是什么

@@ -3,6 +3,8 @@ title: Shapefile文件格式
 category:
   - GIS
   - 多源数据融合
+  - 数据格式
+  - Shapefile
 ---
 ## Shapefile
 - 文件结构

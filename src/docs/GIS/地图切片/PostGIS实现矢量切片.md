@@ -3,6 +3,8 @@ title: PostGIS实现矢量切片
 category:
   - GIS
   - 地图切片
+  - Mapbox-Vector-Tile
+  - PostGIS
 ---
 ## [ST_TileEnvelope](https://postgis.net/docs/manual-dev/ST_TileEnvelope.html)
 ### 函数签名

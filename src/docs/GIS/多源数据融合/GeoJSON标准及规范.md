@@ -3,6 +3,8 @@ title: GeoJSON标准及规范
 category:
   - GIS
   - 多源数据融合
+  - 数据格式
+  - GeoJSON
 ---
 ## RFC7946规范
 ### [数据类型](https://www.rfc-editor.org/rfc/rfc7946#section-1.4)

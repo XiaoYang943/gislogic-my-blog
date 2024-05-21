@@ -3,6 +3,8 @@ title: GeoPackage数据结构
 category:
   - GIS
   - 多源数据融合
+  - 数据格式
+  - GeoPackage
 ---
 ## GeoPackage
 - 是一种开源的空间数据格式，文件以.gpkg结尾。一个.gpkg文件就是一个sqlite数据库

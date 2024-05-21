@@ -1,9 +1,9 @@
 ---
-title: MVT标准(译)
+title: Mapbox-Vector-Tile标准(译)
 category:
   - GIS
-  - 矢量瓦片
-  - MVT
+  - 地图切片
+  - Mapbox-Vector-Tile
 ---
 
 :::tip

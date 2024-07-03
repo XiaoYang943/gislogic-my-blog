@@ -49,3 +49,5 @@ category:
     - docker exec 容器id  nginx -s reload 
 
 - [参考文章](https://www.cnblogs.com/cy-e/p/15359852.html)
+
+test1

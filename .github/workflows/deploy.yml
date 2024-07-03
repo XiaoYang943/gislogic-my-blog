@@ -1,40 +1,41 @@
-name: Deploy My Blog
+name: Deploy Blog Pages
 
 on:
   push:
-    branches:
-      - master
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
-  deploy:
-    runs-on: ubuntu-latest # 使用ubuntu系统镜像运行自动化脚本
-
-    steps: # 自动化步骤
-      #下载代码仓库
-      - uses: actions/checkout@v1
-
-      # 使用action库，安装node
-      - name: use Node.js # 使用action库  actions/setup-node安装node
-        uses: actions/setup-node@v1
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
-          node-version: 18.20.2 # 指定node版本
-      # 安装依赖
-      - name: npm install
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '18.20.2'
+
+      - name: Install dependencies
         run: npm install
 
-      #打包项目
       - name: Build
         run: npm run docs:build
 
-      #部署到服务器
-      - name: Deploy
-        uses: easingthemes/ssh-deploy@v2.1.6
+      - name: Deploy to Nginx Server
         env:
-          #私钥
-          SSH_PRIVATE_KEY: ${{ secrets.ACTIONSKEY }} # GitHub配置的私钥名称
-          ARGS: "-rltgoDzvO"
-          SOURCE: ".vuepress/dist"
-          REMOTE_HOST: ${{ secrets.IP }} #服务器ip
-          REMOTE_USER: ${{ secrets.USER }} #服务器ip
-          TARGET: "/opt/docker/nginx/html/blog" #部署路径
-          EXCLUDE: "/node_modules/"
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USERNAME: ${{ secrets.SSH_USERNAME }}
+          SSH_PASSWORD: ${{ secrets.SSH_PASSWORD }}
+          REMOTE_PATH: ${{ secrets.REMOTE_PATH }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+          sshpass -p $SSH_PASSWORD scp -r ./dev-ops/nginx/html/* root@$SSH_HOST:$REMOTE_PATH

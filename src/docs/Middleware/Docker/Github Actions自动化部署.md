@@ -8,14 +8,14 @@ category:
 ### 1. 给GitHub-Actions配置云服务器私钥
 1. 云服务器生成秘钥
    - cd`/root/.ssh`
-   - 执行`ssh-keygen -t rsa -f github-actions-key -C "1352253543@qq.com"`生成秘钥，给私钥设置强密码(重要)
-     - github-actions-key  生成的私钥 
-     - github-actions-key.pub  生成的公钥
+   - 执行`ssh-keygen`生成秘钥，给私钥设置强密码(重要)
+     - id_rsa  生成的私钥 
+     - id_rsa.pub  生成的公钥
 2. 给GitHub-Actions配置云服务器私钥
    - github仓库地址->settings->secrets->actions->new repository secret
    - cat生成的私钥并配置
 ### 2. 给云服务器配置公钥
-- 执行`cat ~/.ssh/github-actions-key.pub >> ~/.ssh/authorized_keys`，将公钥内容追加填写到`authorized_keys`中
+- 执行`cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys`，将公钥内容追加填写到`authorized_keys`中
 - 权限检查
   - chmod 600 authorized_keys 
   - chmod 700 ~/.ssh

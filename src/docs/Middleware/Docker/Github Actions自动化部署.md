@@ -16,6 +16,10 @@ category:
    - cat生成的私钥并配置
 ### 2. 给云服务器配置公钥
 - 执行`cat ~/.ssh/github-actions-key.pub >> ~/.ssh/authorized_keys`，将公钥内容追加填写到`authorized_keys`中
+- 权限检查
+  - chmod 600 authorized_keys 
+  - chmod 700 ~/.ssh
+
 ### 3. 配置Nginx(省略...)
 ### 4. 配置工作流
 1. 项目的根目录下创建`.github/workflows/deploy.yml`并配置相关信息

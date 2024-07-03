@@ -33,7 +33,7 @@ jobs:
           #私钥
           SSH_PRIVATE_KEY: ${{ secrets.ACTIONSKEY }} # GitHub配置的私钥名称
           ARGS: "-rltgoDzvO"
-          SOURCE: "docs/.vuepress/dist"
+          SOURCE: ".vuepress/dist"
           REMOTE_HOST: ${{ secrets.IP }} #服务器ip
           REMOTE_USER: ${{ secrets.USER }} #服务器ip
           TARGET: "/opt/docker/nginx/html/blog" #部署路径

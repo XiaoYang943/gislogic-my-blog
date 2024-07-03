@@ -1,12 +1,10 @@
 ---
-title: Github Actions自动化部署
+title: Github-Actions工作流
 article: true
 category:
-  - 中间件
-  - Docker
-  - Nginx
+  - CI/CD
 ---
-## Github Actions自动化部署
+## Github-Actions工作流
 ### 1. 给GitHub-Actions配置云服务器私钥
 1. 云服务器生成秘钥
    - cd`/root/.ssh`

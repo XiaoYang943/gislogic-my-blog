@@ -68,4 +68,4 @@ jobs:
 ```
 2. 推送本地的 `deploy.yml` 到远程 GitHub 源码库，查看最后 Actions 执行效果即可
 
-- test2
+- test3

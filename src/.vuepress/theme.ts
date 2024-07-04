@@ -14,7 +14,9 @@ export default hopeTheme({
       "Word",
       "ReadingTime",
   ],
-
+  repoDisplay:true, // 导航栏内显示仓库链接
+  repo: "XiaoYang943/gislogic-my-blog",  // 仓库链接
+  repoLabel: "GitHub",  // 仓库链接图标
   iconAssets: "fontawesome-with-brands",
 
   docsDir: "src",

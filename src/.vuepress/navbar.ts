@@ -3,7 +3,7 @@ import { navbar } from "vuepress-theme-hope";
 export default navbar([
   "/",
   {
-    text: "Blog",
+    text: "Docs",
     icon: "edit",
     link: "/docs/GIS/首页",
   },

@@ -27,4 +27,9 @@ export default navbar([
     icon: "edit",
     link: "/docs/project/首页",
   },
+  {
+    text: "Navigation",
+    icon: "edit",
+    link: "/docs/ToolsNav/首页",
+  },
 ]);

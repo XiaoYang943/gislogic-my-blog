@@ -74,7 +74,7 @@
         "description": ""
       },
       {
-        "path": "https://docs.mapbox.com/android/java/api/libjava-turf/6.15.0/",
+        "path": "https://github.com/sheinbergon/dremio-udf-gis",
         "name": "PostGIS-API-JAVA",
         "imgPath": "https://postgis.net/brand.svg",
         "description": "使用JAVA实现部分PostGIS功能"

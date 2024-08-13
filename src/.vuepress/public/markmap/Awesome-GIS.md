@@ -3,14 +3,8 @@ isMarkmap: true
 ---
 
 # Awesome GIS
-## 导航索引
-- [awesome-gis](https://github.com/sshuair/awesome-gis)
-- [dippermap](https://nav.dippermap.com/)
 ## 工具库
 ### 通用
-#### GDAL
-- [官网](https://gdal.org/)
-- [JAVA文档](https://gdal.org/java/)
 #### GeoTools
 - [官网](https://geotools.org/)
 - [GitHub](https://github.com/geotools/geotools)
@@ -35,26 +29,6 @@ isMarkmap: true
 ### demo
 - [planar_algorithm](https://github.com/huifer/planar_algorithm)
 - [algorithm-in-gis](https://github.com/hulongping/algorithm-in-gis)
-## 数据格式
-### Shp
-- [标准](https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf)
-### GeoJSON
-- [官网](https://geojson.org/)
-- [RFC 7946标准](https://datatracker.ietf.org/doc/html/rfc7946)
-- [ultimate-geojson](https://github.com/mokszr/ultimate-geojson)
-### KML
-- [官网](https://developers.google.cn/kml?hl=zh-cn)
-### GPX
-- [gpxpy](https://github.com/tkrajina/gpxpy)
-### GeoArrow
-- [官网](https://geoarrow.org/)
-### GeoPackage
-- [geopackage-java](https://github.com/ngageoint/geopackage-java)
-### CityGML
-- [citygml4j](https://github.com/citygml4j/citygml4j)
-### MVT
-- [vector-tile-spec](https://github.com/mapbox/vector-tile-spec)
-- [vector-tiles-standards](https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/)
 ## 数据编码方式
 ### protocol-buffers
 - [官网](https://protobuf.dev/overview/)

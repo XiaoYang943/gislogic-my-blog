@@ -1,28 +1,24 @@
 <template>
   <el-aside>
-    <!-- v-if 异步渲染menu -->
     <el-menu
       active-text-color="#2cc0da"
       class="sidebar_container"
       style="height: 100%"
       unique-opened
+      @handleSelect="handleSelect"
     >
       <el-scrollbar max-height="800px">
-        <DemoAsideMenu :menuList="props.menuList"></DemoAsideMenu>
+        <AsideMenu :menuList="props.menuList"></AsideMenu>
       </el-scrollbar>
     </el-menu>
   </el-aside>
 </template>
 
 <script lang="ts" setup>
-import DemoAsideMenu from './DemoAsideMenu.vue'
-// import { useRouter } from 'vue-router'
-//
-// const router = useRouter()
-//
-// function handleSelect(item: any) {
-//   router.push(item.path)
-// }
+import AsideMenu from './AsideMenu.vue'
+function handleSelect(item: any) {
+  window.open(item.path)
+}
 
 const props = defineProps({
   menuList: [] as any

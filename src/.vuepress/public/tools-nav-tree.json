@@ -1,0 +1,107 @@
+[
+  {
+    "name": "导航索引",
+    "children": [
+      {
+        "path": "https://github.com/sshuair/awesome-gis",
+        "name": "awesome-gis",
+        "imgPath": "/public/assets/icon/github.ico",
+        "description": "GIS工具导航"
+      },
+      {
+        "path": "https://nav.dippermap.com/",
+        "name": "dippermap",
+        "imgPath": "https://mdn.alipayobjects.com/huamei_b5qxsh/afts/img/A*lImyTYAmEoYAAAAAAAAAAAAADrZ5AQ/original",
+        "description": "GIS工具导航"
+      }
+    ]
+  },
+  {
+    "name": "通用轮子",
+    "children": [
+      {
+        "path": "https://gdal.org/",
+        "name": "GDAL-官网",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://gdal.org/java/",
+        "name": "GDAL-JAVA-API文档",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "空间数据格式",
+    "children": [
+      {
+        "path": "https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf",
+        "name": "Shapefile-标准",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://geojson.org/",
+        "name": "GeoJSON-官网",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://datatracker.ietf.org/doc/html/rfc7946",
+        "name": "GeoJSON-标准",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://github.com/mokszr/ultimate-geojson",
+        "name": "GeoJSON-库",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://developers.google.cn/kml?hl=zh-cn",
+        "name": "KML-官网",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://github.com/tkrajina/gpxpy",
+        "name": "gpxpy",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": "python解析gpx"
+      },
+      {
+        "path": "https://geoarrow.org/",
+        "name": "geoarrow-官网",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://github.com/ngageoint/geopackage-java",
+        "name": "geopackage-java",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": "java解析geopackage"
+      },
+      {
+        "path": "https://github.com/citygml4j/citygml4j",
+        "name": "citygml",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": ""
+      },
+      {
+        "path": "https://github.com/mapbox/vector-tile-spec",
+        "name": "vector-tile-spec",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": "MVT标准"
+      },
+      {
+        "path": "https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/",
+        "name": "vector-tiles-standards",
+        "imgPath": "https://blog-image-9943.oss-cn-beijing.aliyuncs.com/20230529233920.png",
+        "description": "MVT标准"
+      }
+    ]
+  }
+]

@@ -41,6 +41,7 @@
         <el-card
           v-if="item.children"
           class="card-parent"
+          :id="item.name"
         >
           <template #header>
             <div class="card-header-parent">
@@ -51,26 +52,24 @@
             <el-card
               class="card-children"
               shadow="hover"
+              @click="open(childItem)"
             >
-              <template #header>
-                <div class="card-header-children">
-                  <span
-                    :title="childItem.name"
-                    v-html="filterTitle(childItem.name)"
-                  ></span>
-                </div>
-              </template>
               <el-image
-                :src="childItem.imgPath"
-                fit="fill"
-                lazy
-                style="width: 100%; height: 100%; cursor: pointer"
-                @click="open(childItem)"
+                  :src="childItem.imgPath"
+                  fit="contain"
+                  lazy
+                  style="height: 40px;width: 40px"
               ></el-image>
 
-              <div class="bottom">
-                <span>{{ childItem.description }}</span>
+              <div style="display: flex;flex-direction: column;margin-left: 10px">
+                 <span
+                     :title="childItem.name"
+                     v-html="filterTitle(childItem.name)"
+                     style="font-size: 16px"
+                 ></span>
+                <span style="font-size: 12px">{{ childItem.description }}</span>
               </div>
+
             </el-card>
           </div>
         </el-card>
@@ -218,6 +217,7 @@ function open(childItem: any) {
     display: flex;
     flex-flow: row wrap;
     padding: 0;
+    margin: 10px 15px;
   }
 }
 
@@ -228,9 +228,10 @@ function open(childItem: any) {
 
 .card-children {
   margin: 10px;
-  width: 235px;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
+  max-height: 60px;
 }
 
 .card-children ::v-deep(.el-card__header) {

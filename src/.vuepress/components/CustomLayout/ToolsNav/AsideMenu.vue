@@ -2,7 +2,7 @@
   <template v-for="menuItem in props.menuList">
     <component
         :is="menuItem.children ? 'el-sub-menu' : 'el-menu-item'"
-        :index="menuItem.children ? menuItem.id : ''"
+        :index="menuItem.children ? menuItem.name : ''"
         @click="open(menuItem)"
     >
       <template #title>
@@ -25,7 +25,7 @@ function open(menuItem: any) {
   } else {
     $bus.emit('clearInput')
     setTimeout(() => {
-      let div = document.getElementById(menuItem.id)
+      let div = document.getElementById(menuItem.name)
       if (div) {
         div.scrollIntoView({ behavior: 'smooth', block: 'start' })
       }

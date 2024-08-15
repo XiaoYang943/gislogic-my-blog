@@ -2,7 +2,6 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { fillTemplate } from 'markmap-render';
 import { Transformer } from 'markmap-lib';
-import * as childProcess from 'child_process';
 const directory = 'src/.vuepress/public/markmap';
 const markdownFiles: string[] = [];
 const transformer = new Transformer();

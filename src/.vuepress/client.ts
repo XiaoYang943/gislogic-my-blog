@@ -9,7 +9,7 @@ const FooterRunTime = defineAsyncComponent(() => import("./components/Footer/Foo
 import mitt from 'mitt'
 import axios from 'axios'
 export default defineClientConfig({
-  enhance: ({ app, router, siteData }) => {
+  enhance: ({ app }) => {
     app.use(ElementPlus)
     app.config.globalProperties.$bus = mitt()
     app.config.globalProperties.$axios = axios

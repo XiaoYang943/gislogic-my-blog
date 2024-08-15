@@ -22,23 +22,17 @@
 </template>
 
 <script lang="ts" setup>
-import {getCurrentInstance, reactive} from "vue";
+import {reactive} from "vue";
 import Navbar from 'vuepress-theme-hope/modules/navbar/components/Navbar.js';
 import Aside from "./Aside.vue";
 import MainCard from "./MainCard.vue";
+import jsonData from '../../../public/tools-nav-tree.json'
 let data = reactive({
   menuList: [] as any,
   cardList: [] as any
 })
-const { $axios } = getCurrentInstance()!.appContext.config.globalProperties
-$axios
-    .get('/tools-nav-tree.json')
-    .then((res: any) => {
-      if (res.status == 200) {
-        data.menuList = res.data
-        data.cardList = res.data
-      }
-    })
+data.menuList = jsonData
+data.cardList = jsonData
 </script>
 
 <style scoped>

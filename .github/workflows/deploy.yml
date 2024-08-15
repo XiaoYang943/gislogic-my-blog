@@ -23,8 +23,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Update Markmap
+        run: npm run update-markmap
+
       - name: Build
-        run: npm run docs:build
+        run: npm run build
 
       - name: Deploy to Nginx Server
         env:

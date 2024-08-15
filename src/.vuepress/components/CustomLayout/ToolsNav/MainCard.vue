@@ -16,9 +16,9 @@
         <template #default="{ item }">
           <div>
             <span
-              :title="item.value"
+              :title="item.name"
               style="margin-right: 50px"
-              v-html="filterTitle(item.value)"
+              v-html="filterTitle(item.name)"
             ></span>
             <span
               :title="item.description"
@@ -33,7 +33,6 @@
       <el-empty
         v-if="reactiveData.cardList.length === 0"
         description="没有搜索出结果，请重新搜索！"
-        image="src/assets/404.png"
         image-size="450"
       >
       </el-empty>
@@ -67,7 +66,11 @@
                      v-html="filterTitle(childItem.name)"
                      style="font-size: 16px"
                  ></span>
-                <span style="font-size: 12px">{{ childItem.description }}</span>
+                <span
+                    :title="childItem.description"
+                    v-html="filterTitle(childItem.description)"
+                    style="font-size: 12px"
+                ></span>
               </div>
 
             </el-card>
@@ -81,13 +84,20 @@
 import { getCurrentInstance, onMounted, reactive, ref, watch } from 'vue'
 const { $bus } = getCurrentInstance()!.appContext.config.globalProperties
 const props = defineProps({
-  menuList: Array
+  menuList: Array<NavigationItem>
 })
+interface NavigationItem {
+  path: string
+  name: string
+  imgPath: string
+  description: string
+}
 let keyword = ref('')
-let searchList: any[] = []
+let searchList: NavigationItem[] = []
 let reactiveData = reactive({
   cardList: [] as any
 })
+
 onMounted(() => {
   $bus.on('clearInput', () => {
     keyword.value = ''
@@ -114,68 +124,58 @@ watch(
   { immediate: true, deep: true }
 )
 
-const check = (data: any, list: any) => {
+const check = (data: any, list: Array<NavigationItem>) => {
   data.forEach((item: any) => {
     if (item.children && item.children.length > 0) {
       check(item.children, list)
     } else {
-      if (!item.name || !item.description) {
-        return
-      } else {
-        list.push({
-          path: item.path,
-          value: item.name,
-          type: item.type,
-          imgPath: item.imgPath,
-          description: item.description,
-        })
-        // list.push(item); // 为什么直接传item报错
-      }
+      list.push({...item})
     }
   })
   return list
 }
 
-function querySearch(queryString: any, cb: any) {
+function querySearch(queryString: string, cb: any) {
   // 在拉平的数组中搜索的结果
   let temp = queryString
     ? searchList.filter(createFilter(queryString))
     : searchList
-  let ids = temp.map((item) => {
+  let paths = temp.map((item) => {
     return item.path
   })
-
-  // 根据id数组在源数据中搜索的结果
-  let result = filterArr(props.menuList, ids)
-  reactiveData.cardList = result
+  reactiveData.cardList = filterArr(props.menuList, paths)
   cb(temp)
 }
 
-function filterArr(arr: any, ids: any) {
-  return arr.reduce((list: any, item: any) => {
-    let has = ids.includes(item.path)
+function filterArr(arr: Array<NavigationItem>, paths: Array<string>) {
+  return arr.reduce((list: Array<NavigationItem>, item: any) => {
+    let has = paths.includes(item.path)
     let res = { ...item }
     if (!has && Array.isArray(item.children)) {
-      res.children = filterArr(item.children, ids)
+      res.children = filterArr(item.children, paths)
       has = !!res.children.length
     }
-
     has && list.push(res)
     return list
   }, [])
 }
 
-function createFilter(queryString: any) {
-  return (restaurant: any) => {
-    return (
-      /*index==0表示是否在第一个索引位置找到输入的字符，*/
-      restaurant.value.indexOf(queryString) != -1
-    )
-  }
+
+
+function createFilter(queryString: string) {
+  return (navigation: NavigationItem) => {
+    return match(queryString,navigation.name) || match(queryString,navigation.description)
+  };
 }
 
-//输入选定的值
-function handleSelect(selectedItem: any) {
+const match = (queryString:string,propsName:string) => {
+  return propsName.toLowerCase().match(queryString.toLowerCase())
+}
+/**
+ * 下拉菜单选中
+ * @param selectedItem
+ */
+function handleSelect(selectedItem: NavigationItem) {
   let ids = [selectedItem.path]
   // 根据id数组在源数据中搜索的结果
   let result = filterArr(props.menuList, ids)
@@ -183,13 +183,13 @@ function handleSelect(selectedItem: any) {
 }
 
 // 给每个结果中匹配字符高亮
-function filterTitle(originStr: any) {
+function filterTitle(originStr: string) {
   if (!keyword.value) {
     return originStr
   }
   // 将匹配的字符添加一个‘高亮’的标签外表
   let str = keyword.value
-  const regEscape = (v: any) => {
+  const regEscape = (v: string) => {
     if (v) {
       return v.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, '\\$&')
     }
@@ -202,7 +202,7 @@ function filterTitle(originStr: any) {
   }
 }
 
-function open(childItem: any) {
+function open(childItem: NavigationItem) {
   window.open(childItem.path)
 }
 </script>

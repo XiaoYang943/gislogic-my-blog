@@ -28,7 +28,9 @@ function findMarkdownFiles(dir: string): void {
                         encoding: "utf8"
                     },
                     (err) => {
-                        console.log("err:" + err);
+                        if(err) {
+                            console.log("Error to transform Markmap:" + err);
+                        }
                     }
                 );
             }

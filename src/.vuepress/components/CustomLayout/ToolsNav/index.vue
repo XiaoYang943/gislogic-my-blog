@@ -4,7 +4,7 @@
       <Navbar/>
     </div>
     <div id="main-content" class="vp-project-home">
-      <el-container style="max-height: 805px;">
+      <el-container style="max-height: 895px;">
         <el-row style="width: 100%; margin: 0px 10px">
           <el-col :span="3" style="width: 100%;height: 100%">
             <Aside
@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import {reactive} from "vue";
+import {onMounted, reactive} from "vue";
 import Navbar from 'vuepress-theme-hope/modules/navbar/components/Navbar.js';
 import Aside from "./Aside.vue";
 import MainCard from "./MainCard.vue";
@@ -31,8 +31,11 @@ let data = reactive({
   menuList: [] as any,
   cardList: [] as any
 })
-data.menuList = jsonData
-data.cardList = jsonData
+onMounted(() => {
+  data.menuList = jsonData
+  data.cardList = jsonData
+})
+
 </script>
 
 <style scoped>

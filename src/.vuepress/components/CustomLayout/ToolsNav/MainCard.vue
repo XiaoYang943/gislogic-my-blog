@@ -209,7 +209,7 @@ function open(childItem: NavigationItem) {
 
 <style lang="scss" scoped>
 .card-parent {
-  margin: 30px;
+  margin: 10px;
 }
 
 .card-parent {
@@ -255,5 +255,6 @@ function open(childItem: NavigationItem) {
 .el-main {
   background-color: #f5f7f9;
   height: calc(100vh - 2rem);
+  padding: 0;
 }
 </style>

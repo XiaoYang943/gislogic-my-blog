@@ -167,6 +167,18 @@
         "name": "FlatGeoBuf",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
         "description": ""
+      },
+      {
+        "path": "https://www.cogeo.org/",
+        "name": "COG",
+        "imgPath": "https://www.cogeo.org/images/logo/COG_Alt_Logo.png",
+        "description": ""
+      },
+      {
+        "path": "https://github.com/cogeotiff/cog-spec/blob/master/spec.md",
+        "name": "COG-Standards",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+        "description": ""
       }
     ]
   },

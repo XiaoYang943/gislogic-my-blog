@@ -122,6 +122,16 @@
     ]
   },
   {
+    "name": "TileJSON",
+    "children": [
+      {
+        "path": "https://github.com/mapbox/tilejson-spec/tree/master/3.0.0",
+        "name": "TileJSON-Standards",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+        "description": ""
+      }
+  },
+  {
     "name": "GPX",
     "children": [
       {
@@ -177,15 +187,15 @@
       },
       {
         "path": "https://github.com/mapbox/vector-tile-spec",
-        "name": "vector-tile-spec",
+        "name": "MVT-Standards",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-        "description": "MVT标准"
+        "description": ""
       },
       {
         "path": "https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/",
-        "name": "vector-tiles-standards",
+        "name": "MVT-Standards",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-        "description": "MVT标准"
+        "description": ""
       }
     ]
   },
@@ -205,9 +215,9 @@
     "children": [
       {
         "path": "https://github.com/mapbox/mbtiles-spec",
-        "name": "MBTiles",
+        "name": "MBTiles-Standards",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-        "description": "MBTiles-standards"
+        "description": ""
       }
     ]
   },

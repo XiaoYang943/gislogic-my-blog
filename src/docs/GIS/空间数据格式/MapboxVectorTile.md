@@ -1,9 +1,9 @@
 ---
-title: Mapbox-Vector-Tile标准(译)
+title: MapboxVectorTile
 category:
   - GIS
-  - 地图切片
-  - Mapbox-Vector-Tile
+  - 空间数据格式
+  - MVT
 ---
 
 :::tip

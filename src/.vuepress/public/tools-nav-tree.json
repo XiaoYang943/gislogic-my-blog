@@ -82,14 +82,8 @@
     ]
   },
   {
-    "name": "空间数据格式",
+    "name": "GeoJSON",
     "children": [
-      {
-        "path": "https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf",
-        "name": "Shapefile-Standards",
-        "imgPath": "https://cdn-icons-png.flaticon.com/128/10007/10007114.png",
-        "description": ""
-      },
       {
         "path": "https://geojson.org/",
         "name": "GeoJSON-Home",
@@ -107,7 +101,12 @@
         "name": "GeoJSON",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
         "description": ""
-      },
+      }
+    ]
+  },
+  {
+    "name": "KML、GML",
+    "children": [
       {
         "path": "https://developers.google.cn/kml?hl=zh-cn",
         "name": "KML-Home",
@@ -115,41 +114,59 @@
         "description": ""
       },
       {
+        "path": "https://github.com/citygml4j/citygml4j",
+        "name": "CityGML",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "TileJSON",
+    "children": [
+      {
+        "path": "https://github.com/mapbox/tilejson-spec/tree/master/3.0.0",
+        "name": "TileJSON-Standards",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+        "description": ""
+      }
+  },
+  {
+    "name": "GPX",
+    "children": [
+      {
         "path": "https://github.com/tkrajina/gpxpy",
         "name": "gpxpy.Python",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
         "description": "python解析gpx"
-      },
+      }
+    ]
+  },
+  {
+    "name": "GeoArrow",
+    "children": [
       {
         "path": "https://geoarrow.org/",
         "name": "GeoArrow-Home",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
         "description": ""
-      },
+      }
+    ]
+  },
+  {
+    "name": "GeoPackage",
+    "children": [
       {
         "path": "https://github.com/ngageoint/geopackage-java",
         "name": "GeoPackage-JAVA",
         "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
         "description": "java解析geopackage"
-      },
-      {
-        "path": "https://github.com/citygml4j/citygml4j",
-        "name": "CityGML",
-        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-        "description": ""
-      },
-      {
-        "path": "https://github.com/mapbox/vector-tile-spec",
-        "name": "vector-tile-spec",
-        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-        "description": "MVT标准"
-      },
-      {
-        "path": "https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/",
-        "name": "vector-tiles-standards",
-        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-        "description": "MVT标准"
-      },
+      }
+    ]
+  },
+  {
+    "name": "Protobuf",
+    "children": [
       {
         "path": "https://protobuf.dev/overview/",
         "name": "protobuf",
@@ -169,9 +186,48 @@
         "description": ""
       },
       {
+        "path": "https://github.com/mapbox/vector-tile-spec",
+        "name": "MVT-Standards",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+        "description": ""
+      },
+      {
+        "path": "https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/",
+        "name": "MVT-Standards",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "TIFF",
+    "children": [
+      {
         "path": "https://www.cogeo.org/",
         "name": "COG-Home",
         "imgPath": "https://www.cogeo.org/images/logo/COG_Alt_Logo.png",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "MBTiles",
+    "children": [
+      {
+        "path": "https://github.com/mapbox/mbtiles-spec",
+        "name": "MBTiles-Standards",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "name": "ShapeFile",
+    "children": [
+      {
+        "path": "https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf",
+        "name": "ShapeFile-Standards",
+        "imgPath": "https://cdn-icons-png.flaticon.com/128/10007/10007114.png",
         "description": ""
       }
     ]

@@ -8,10 +8,13 @@ category:
 
 ## [MBTiles规范](https://github.com/mapbox/mbtiles-spec/tree/master)
 ### 约定
+::: caution
 1. SQLite数据库的表table和视图view，在本文中统称为表table
-2. **必须**要遵循的必须要遵循 
+2. **必须**要遵循的必须要遵循
 3. SQLite数据库(3.0.0及以上版本)
 4. MBTiles瓦片集中表的 'text' 类型的字段中的所有文本都**必须**编码为 UTF-8
+:::
+
 ### 是什么
 - MBTiles是一个在SQLite数据库中存储地图瓦片数据的数据格式
 ### metadata表(必须)
@@ -19,56 +22,72 @@ category:
 #### 必须有的字段
 - `name` (text) 
 - `value` (text)
-#### 必须有的属性
-- `name` (string)
-  - 瓦片集的名称
-- `format` (string)
-  - 瓦片数据的格式
-    - `pbf`
-    - `jpg`
-    - `png`
-    - `webp`
-- `json` (stringified JSON object)
-  - 如果`format`是mvt的`pbf`,该属性才是必须的
-  - 列出矢量切片中显示的图层以及这些图层中显示的要素属性的名称和类型
-  - 必须是UTF-8编码
-  - 必须有`vector_layers`属性,其值是 JSON 对象数组,一个JSON对象描述的是一个图层
-    - 每一个JSON对象必须包含如下k-v
-      - `id` (string)
-        - 图层id，即[Mapbox Vector Tile spec](https://github.com/mapbox/vector-tile-spec/tree/master/2.1#41-layers)中的图层name
-      - `fields` (JSON object)
-        - 图层的属性名称和属性类型
-          - 属性类型 ：`"Number"`, `"Boolean"`, or `"String"`
-    - 每一个JSON对象可以包含如下k-v
-      - `description` (string).
-      - `minzoom` (number): 此图层的最低缩放级别.必须>=整个瓦片集的`minzoom`
-      - `maxzoom` (number): 此图层的最高缩放级别.必须<=整个瓦片集的`maxzoom`
-    - 这些属性用于描述不同矢量图层集以同一瓦片集的不同缩放级别显示的情况，**例如，在“次要道路”图层仅存在于高缩放级别的情况下**
-  - 可以有`tilestats`属性
-    - 详情见[mapbox-geostats](https://github.com/mapbox/mapbox-geostats#output-the-stats)
-    - 和`vector_layers`类似，它列出了瓦片集的图层和在每个图层中的属性
-#### 应该有的属性
-- `bounds` (string of comma-separated numbers)
+#### 必须有的记录
+##### `name` 
+- 类型：string
+- 含义：瓦片集的名称
+##### `format`
+- 类型：string
+- 含义：瓦片数据的格式
+  - `pbf`
+  - `jpg`
+  - `png`
+  - `webp`
+##### `json`
+::: tip
+- 如果`format`是mvt的`pbf`,该记录才是必须的
+- 值必须是UTF-8编码
+:::
+
+- 类型：Stringified JSON object
+- 含义：列出矢量切片中显示的图层以及这些图层中显示的要素属性的名称和类型
+- 必须有`vector_layers`属性,其值是 JSON 对象数组,一个JSON对象描述的是一个图层
+  - 每一个JSON对象必须包含如下k-v
+    - `id` (string)
+      - 图层id，即[Mapbox Vector Tile spec](https://github.com/mapbox/vector-tile-spec/tree/master/2.1#41-layers)中的图层name
+    - `fields` (JSON object)
+      - 图层的属性名称和属性类型
+        - 属性类型 ：`"Number"`, `"Boolean"`, or `"String"`
+  - 每一个JSON对象可以包含如下k-v
+    - `description` (string)
+    - `minzoom` (number): 此图层的最低缩放级别.必须>=整个瓦片集的`minzoom`
+    - `maxzoom` (number): 此图层的最高缩放级别.必须<=整个瓦片集的`maxzoom`
+  - 这些属性用于描述不同矢量图层集以同一瓦片集的不同缩放级别显示的情况，**例如，在“次要道路”图层仅存在于高缩放级别的情况下**
+- 可以有`tilestats`属性
+  - 详情见[mapbox-geostats](https://github.com/mapbox/mapbox-geostats#output-the-stats)
+  - 和`vector_layers`类似，它列出了瓦片集的图层和在每个图层中的属性
+#### 应该有的记录
+##### `bounds`
+- 类型：string of comma-separated numbers
+- 含义 
   - The maximum extent of the rendered map area. 
   - Bounds must define an area covered by all zoom levels. 
   - The bounds are represented as `WGS 84`latitude and longitude values, in the OpenLayers Bounds format(left, bottom, right, top). 
     - For example, the `bounds` of the full Earth, minus the poles, would be:`-180.0,-85,180,85`.
-- `center` (string of comma-separated numbers)
-  - The longitude, latitude, and zoom level of the default view of the map.
-    Example: `-122.1906,37.7599,11`
-- `minzoom` (number)
-  - The lowest zoom level for which the tileset provides data
-- `maxzoom` (number)
-  - The highest zoom level for which the tileset provides data
-#### 可以有的属性
-- `attribution` (HTML string)
-  - An attribution string, which explains the sources of data and/or style for the map.
-- `description` (string)
-  - A description of the tileset's content. 
-- `type` (string)
-  - `overlay` or `baselayer`
-- `version` (number)
-  - The version of the tileset.
+##### `center`
+- 类型：string of comma-separated numbers
+- 含义
+  - The longitude, latitude, and zoom level of the default view of the map. 
+    - Example: `-122.1906,37.7599,11`
+##### `minzoom`
+- 类型：number
+- 含义：The lowest zoom level for which the tileset provides data
+##### `maxzoom`
+- 类型：number
+- 含义：The highest zoom level for which the tileset provides data
+#### 可以有的记录
+##### `attribution`
+- 类型：HTML string 
+- 含义：An attribution string, which explains the sources of data and/or style for the map.
+##### `description`
+- 类型：string 
+- 含义：A description of the tileset's content. 
+##### `type`
+- 类型：string
+- 值：`overlay` or `baselayer`
+##### `version`
+- 类型：number
+- 含义：The version of the tileset.
 #### example
 ::: details
 * `name`: `TIGER 2016`
@@ -249,26 +268,27 @@ category:
 :::
 ### tiles表(必须)
 - 存储瓦片数据
-#### 必须有的属性
+#### 必须有的记录
 - `zoom_level` (integer)
 - `tile_column` (integer)
 - `tile_row` (integer)
 - `tile_data` (blob)
   - 值必须是raw binary image or vector tile data
 ##### 注意
+::: tip
 - zxy的值必须遵循[Tile Map Service Specification](http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification)、[global-mercator](http://wiki.osgeo.org/wiki/Tile_Map_Service_Specification#global-mercator)
   - TMS规定，Y轴向上，因此 11327791 的切片以11、327、1256 的形式，因为 1256 为 2^11 - 1 - 791
-
+:::
 ### grids表(可以有)
 - 实现细节参考：[UTFGrid specification](https://github.com/mapbox/utfgrid-spec)
 - 必须包含以 'gzip' 格式压缩的 UTFGrid 数据
-#### 必须有的属性
+#### 必须有的记录
 - `zoom_level` (integer)
 - `tile_column` (integer)
 - `tile_row` (integer)
 - `grid` (blob)
 ### grid_data表(可以有)
-#### 必须有的属性
+#### 必须有的记录
 - `zoom_level` (integer)
 - `tile_column` (integer)
 - `tile_row` (integer)

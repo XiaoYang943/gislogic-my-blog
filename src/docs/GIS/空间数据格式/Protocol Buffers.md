@@ -2,8 +2,7 @@
 title: Protocol Buffers
 category:
   - GIS
-  - 地图切片
-  - Mapbox-Vector-Tile
+  - 空间数据格式
   - Protocol Buffers
 ---
 ## 什么是Protocol Buffers

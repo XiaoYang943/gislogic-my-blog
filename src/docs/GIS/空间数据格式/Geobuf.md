@@ -2,8 +2,7 @@
 title: Geobuf
 category:
   - GIS
-  - 多源数据融合
-  - 数据格式
+  - 空间数据格式
   - GeoJSON
   - Geobuf
 ---

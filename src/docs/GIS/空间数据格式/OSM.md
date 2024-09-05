@@ -2,7 +2,7 @@
 title: OSM
 category:
   - GIS
-  - 多源数据融合
+  - 空间数据格式
   - 数据格式
   - OSM
 ---

@@ -1,10 +1,9 @@
 ---
-title: 栅格数据
+title: GeoTiff
 category:
   - GIS
-  - 多源数据融合
-  - 数据格式
-  - 栅格数据
+  - 空间数据格式
+  - GeoTiff
 ---
 ## 图像金字塔
 - 是什么

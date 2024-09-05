@@ -1,9 +1,8 @@
 ---
-title: Shapefile文件格式
+title: Shapefile
 category:
   - GIS
-  - 多源数据融合
-  - 数据格式
+  - 空间数据格式
   - Shapefile
 ---
 ## Shapefile

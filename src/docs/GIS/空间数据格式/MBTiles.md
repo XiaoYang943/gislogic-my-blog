@@ -8,7 +8,7 @@ category:
 
 ## [MBTiles规范](https://github.com/mapbox/mbtiles-spec/tree/master)
 ### 约定
-::: caution
+::: tip
 1. SQLite数据库的表table和视图view，在本文中统称为表table
 2. **必须**要遵循的必须要遵循
 3. SQLite数据库(3.0.0及以上版本)

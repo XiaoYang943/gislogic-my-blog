@@ -1,6 +1,6 @@
 <template>
   <div class="theme-container no-sidebar">
-    <div >
+    <div>
       <Navbar/>
     </div>
     <div id="main-content" class="vp-project-home">
@@ -31,13 +31,13 @@
         </el-autocomplete>
         <div style="margin: 0 auto;width: 50%">
           <el-check-tag v-for="item in data.tagList"
-                        v-model="data.selectedTagId"
                         :key="item.id"
-                        :value="item.id"
-                        @change="onChange(item.id)"
-                        class="mr10 custom-tag"
+                        v-model="data.selectedTagId"
                         :class="{active: data.selectedTagId.includes(item.id)}"
-                        size="small">{{ item.name }}
+                        :value="item.id"
+                        class="mr10 custom-tag"
+                        size="small"
+                        @change="onChange(item.id)">{{ item.name }}
           </el-check-tag>
         </div>
         <div style="margin: 20px auto;width: 80%;height: 100%;display: flex;flex-direction: row;flex-flow: wrap">
@@ -57,13 +57,13 @@
             <div style="display: flex;flex-direction: column;margin-left: 10px">
                  <span
                      :title="childItem.name"
-                     v-html="filterTitle(childItem.name)"
                      style="font-size: 16px"
+                     v-html="filterTitle(childItem.name)"
                  ></span>
               <span
                   :title="childItem.description"
-                  v-html="filterTitle(childItem.description)"
                   style="font-size: 12px"
+                  v-html="filterTitle(childItem.description)"
               ></span>
             </div>
 
@@ -76,15 +76,16 @@
 </template>
 
 <script lang="ts" setup>
-import {computed, onMounted, reactive, ref, watch} from "vue";
+import {onMounted, reactive, watch} from "vue";
 import Navbar from 'vuepress-theme-hope/modules/navbar/components/Navbar.js';
 import jsonData from '../../../public/navigation.json'
 import {clone} from "lodash"
 import {getUuid} from "../../../utils";
+// TODO: tags排序
 type Tag = {
-  name:string,
-  id:string,
-  checked:boolean
+  name: string,
+  id: string,
+  checked: boolean
 }
 type Card = {
   path: string
@@ -95,11 +96,11 @@ type Card = {
 }
 const data = reactive({
   cardList: [],
-  tagList:[], // 所有tag
+  tagList: [], // 所有tag
   selectedTagId: [],  // 勾选的tagId
-  cardListCloned:[],
-  keyword:'', // 搜索框绑定值
-  keywordCopy:'', // 搜索框绑定值的副本
+  cardListCloned: [],
+  keyword: '', // 搜索框绑定值
+  keywordCopy: '', // 搜索框绑定值的副本
 })
 
 
@@ -120,15 +121,17 @@ const querySearch = (queryString: string, cb: any) => {
   cb(results)
 }
 // 搜索框的匹配逻辑
-const match = (queryString:string,propsName:string) => {
+const match = (queryString: string, propsName: string) => {
   return propsName.toLowerCase().match(queryString.toLowerCase())
 }
+
 // 搜索框的过滤器
 function createFilter(queryString: string) {
   return (navigation: Card) => {
-    return match(queryString,navigation.name) || match(queryString,navigation.description)
+    return match(queryString, navigation.name) || match(queryString, navigation.description)
   };
 }
+
 // 搜索 高亮文本
 function filterTitle(originStr: string) {
   if (!data.keyword) {
@@ -155,7 +158,7 @@ function open(childItem: Card) {
 }
 
 // tag的change事件
-const onChange = (tagId:string) => {
+const onChange = (tagId: string) => {
   if (data.selectedTagId.includes(tagId)) {
     data.selectedTagId.splice(data.selectedTagId.indexOf(tagId), 1)
   } else {
@@ -167,7 +170,7 @@ const getDefaultTagSet = () => {
   let tempTagSet = new Set() as Set<string> // 去重后的tagName
   data.cardList.forEach((card) => {
     card.tag.forEach(tagName => {
-      if(!tempTagSet.has(tagName)) {
+      if (!tempTagSet.has(tagName)) {
         tempTagSet.add(tagName)
       }
     })
@@ -202,7 +205,7 @@ watch(
 watch(
     () => data.selectedTagId,
     (newVal) => {
-      if(newVal.length === 0) {
+      if (newVal.length === 0) {
         data.cardList = data.cardListCloned
       } else {
         let selectedTagName = []
@@ -216,16 +219,15 @@ watch(
           return card.tag.some(item => selectedTagName.includes(item));
         })
       }
-    },{
-      deep:true
+    }, {
+      deep: true
     }
 )
 
 
-
 </script>
 
-<style scoped lang="less">
+<style lang="less" scoped>
 .el-container .is-vertical {
   height: 100%;
 }
@@ -249,6 +251,7 @@ watch(
     padding: 0;
     margin: 10px 15px;
   }
+
   margin: 0 20px 20px 0;
 }
 </style>

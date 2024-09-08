@@ -15,6 +15,6 @@ export default navbar([
   {
     text: "Navigation",
     icon: "edit",
-    link: "/docs/ToolsNav/首页",
+    link: "/docs/Navigation/首页",
   },
 ]);

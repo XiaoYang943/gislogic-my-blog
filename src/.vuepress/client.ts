@@ -3,7 +3,7 @@ import { defineClientConfig } from "vuepress/client";
 import { defineAsyncComponent } from "vue"
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
-import ToolsNavLayout from "./components/CustomLayout/ToolsNav/index.vue"
+import Navigation from "./components/CustomLayout/Navigation/index.vue"
 // @ts-ignore
 const FooterRunTime = defineAsyncComponent(() => import("./components/Footer/FooterRunTime.vue"));
 import mitt from 'mitt'
@@ -16,7 +16,7 @@ export default defineClientConfig({
   },
   // 自定义布局
   layouts: {
-    ToolsNavLayout
+    Navigation
   },
   rootComponents:[
     // footer运行时间

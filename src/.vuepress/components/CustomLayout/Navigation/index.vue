@@ -79,7 +79,7 @@
 import {onMounted, reactive, watch} from "vue";
 import Navbar from 'vuepress-theme-hope/modules/navbar/components/Navbar.js';
 import jsonData from '../../../public/navigation.json'
-import {clone} from "lodash"
+import {clone} from "lodash-es"
 import {getUuid} from "../../../utils";
 // TODO: tags排序
 type Tag = {

@@ -165,18 +165,21 @@ const onChange = (tagId: string) => {
     data.selectedTagId.push(tagId)
   }
 }
-// 根据默认card-json计算默认tag集合
-const getDefaultTagSet = () => {
-  let tempTagSet = new Set() as Set<string> // 去重后的tagName
+// 根据默认card-json计算默认tag列表
+const getDefaultTagArr = () => {
+  let tempTagArr = [] // 去重后的tagName
   data.cardList.forEach((card) => {
     card.tag.forEach(tagName => {
-      if (!tempTagSet.has(tagName)) {
-        tempTagSet.add(tagName)
+      if (!tempTagArr.includes(tagName)) {
+        tempTagArr.push(tagName)
       }
     })
   })
+
+  tempTagArr = tempTagArr.concat([]).sort((a, b) => a.localeCompare(b))  // 英文a-z排序
+
   let tagSet = []
-  tempTagSet.forEach((tagName) => {
+  tempTagArr.forEach((tagName) => {
     let tag = {} as Tag
     tag.name = tagName
     tag.id = getUuid()
@@ -185,10 +188,9 @@ const getDefaultTagSet = () => {
   })
   return tagSet
 }
-
 onMounted(() => {
   data.cardList = jsonData
-  data.tagList = getDefaultTagSet()
+  data.tagList = getDefaultTagArr()
   data.cardListCloned = clone(data.cardList)
 })
 watch(

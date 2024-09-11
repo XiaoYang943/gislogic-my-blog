@@ -4,355 +4,478 @@
     "name": "awesome-gis",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "GIS工具导航",
-    "tag":["工具导航"]
+    "tag": [
+      "工具导航"
+    ]
   },
   {
     "path": "https://nav.dippermap.com/",
     "name": "dippermap",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "GIS工具导航",
-    "tag":["工具导航"]
+    "tag": [
+      "工具导航"
+    ]
   },
   {
     "path": "https://gdal.org/",
     "name": "GDAL-Home",
     "imgPath": "https://gdal.org/_static/gdalicon.png",
-    "description": "",
-    "tag":["GDAL"]
+    "description": "GDAL-首页",
+    "tag": [
+      "GDAL"
+    ]
   },
   {
     "path": "https://gdal.org/java/",
     "name": "GDAL-JAVA-API",
     "imgPath": "https://gdal.org/_static/gdalicon.png",
-    "description": "",
-    "tag":["GDAL"]
+    "description": "GDAL-JAVA-文档",
+    "tag": [
+      "GDAL"
+    ]
   },
   {
     "path": "https://github.com/locationtech/jts",
     "name": "JTS",
     "imgPath": "https://github.com/locationtech/jts/raw/master/locationtech_mark.png",
-    "description": "",
-    "tag":["JTS"]
+    "description": "JTS-首页",
+    "tag": [
+      "JTS"
+    ]
   },
   {
     "path": "https://geotools.org/",
     "name": "GeoTools",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["GeoTools"]
+    "description": "GeoTools-首页",
+    "tag": [
+      "GeoTools"
+    ]
   },
   {
     "path": "https://turfjs.org/",
     "name": "Turf.JS",
     "imgPath": "https://turfjs.org/img/logo.svg",
-    "description": "",
-    "tag":["Turf"]
+    "description": "Turf-首页",
+    "tag": [
+      "Turf"
+    ]
   },
   {
     "path": "https://docs.mapbox.com/android/java/guides/",
     "name": "Turf.JAVA",
     "imgPath": "https://turfjs.org/img/logo.svg",
-    "description": "",
-    "tag":["Turf"]
+    "description": "Turf-JAVA实现",
+    "tag": [
+      "Turf"
+    ]
   },
   {
     "path": "https://github.com/mapbox/mapbox-java/blob/main/docs/turf-port.md",
     "name": "Turf.JAVA-TodoList",
     "imgPath": "https://turfjs.org/img/logo.svg",
-    "description": "",
-    "tag":["Turf"]
+    "description": "Turf-代办",
+    "tag": [
+      "Turf"
+    ]
   },
   {
     "path": "https://docs.mapbox.com/android/java/api/libjava-turf/6.15.0/",
     "name": "Turf.JAVA-API",
     "imgPath": "https://turfjs.org/img/logo.svg",
-    "description": "",
-    "tag":["Turf"]
+    "description": "Turf-JAVA文档",
+    "tag": [
+      "Turf"
+    ]
   },
   {
     "path": "https://postgis.net/docs/en/reference.html",
     "name": "PostGIS-API",
     "imgPath": "https://postgis.net/brand.svg",
-    "description": "",
-    "tag":["PostGIS"]
+    "description": "PostGIS-文档",
+    "tag": [
+      "PostGIS"
+    ]
   },
   {
     "path": "https://github.com/sheinbergon/dremio-udf-gis",
     "name": "PostGIS-API-JAVA",
     "imgPath": "https://postgis.net/brand.svg",
-    "description": "使用JAVA实现部分PostGIS功能",
-    "tag":["PostGIS"]
+    "description": "PostGIS-JAVA实现",
+    "tag": [
+      "PostGIS"
+    ]
   },
   {
     "path": "https://geojson.org/",
     "name": "GeoJSON-Home",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/136/136525.png",
-    "description": "",
-    "tag":["GeoJSON"]
+    "description": "GeoJSON-首页",
+    "tag": [
+      "GeoJSON"
+    ]
   },
   {
     "path": "https://datatracker.ietf.org/doc/html/rfc7946",
     "name": "GeoJSON-Standards",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["GeoJSON","Standards"]
+    "description": "GeoJSON-标准",
+    "tag": [
+      "GeoJSON",
+      "Standards"
+    ]
   },
   {
     "path": "https://github.com/mokszr/ultimate-geojson",
     "name": "GeoJSON",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["GeoJSON"]
+    "description": "解析GeoJSON-DTO-JAVA实现",
+    "tag": [
+      "GeoJSON"
+    ]
   },
   {
     "path": "https://developers.google.cn/kml?hl=zh-cn",
     "name": "KML-Home",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/5098/5098184.png",
-    "description": "",
-    "tag":["KML"]
+    "description": "KML-首页",
+    "tag": [
+      "KML"
+    ]
   },
   {
     "path": "https://github.com/citygml4j/citygml4j",
     "name": "CityGML",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["CityGML"]
+    "description": "CityGML-首页",
+    "tag": [
+      "CityGML"
+    ]
   },
   {
     "path": "https://github.com/mapbox/tilejson-spec/tree/master/3.0.0",
     "name": "TileJSON-Standards",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["TileJSON","Standards"]
+    "description": "TileJSON-标准",
+    "tag": [
+      "TileJSON",
+      "Standards"
+    ]
   },
   {
     "path": "https://github.com/tkrajina/gpxpy",
-    "name": "gpxpy.Python",
+    "name": "gpxpy",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "python解析gpx",
-    "tag":["GPX"]
+    "description": "解析gpx-Python实现",
+    "tag": [
+      "GPX"
+    ]
   },
   {
     "path": "https://geoarrow.org/",
     "name": "GeoArrow-Home",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["GeoArrow"]
+    "description": "GeoArrow-首页",
+    "tag": [
+      "GeoArrow"
+    ]
   },
   {
     "path": "https://github.com/ngageoint/geopackage-java",
     "name": "GeoPackage-JAVA",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "java解析geopackage",
-    "tag":["GeoPackage"]
+    "description": "解析GeoPackage-JAVA实现",
+    "tag": [
+      "GeoPackage"
+    ]
   },
   {
     "path": "https://protobuf.dev/overview/",
-    "name": "protobuf",
+    "name": "Protobuf",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Protobuf"]
+    "description": "Protobuf-首页",
+    "tag": [
+      "Protobuf"
+    ]
   },
   {
     "path": "https://github.com/mapbox/geobuf",
     "name": "GeoBuf",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["GeoBuf"]
+    "description": "GeoBuf-首页",
+    "tag": [
+      "GeoBuf",
+      "Protobuf"
+    ]
   },
   {
     "path": "https://github.com/flatgeobuf/flatgeobuf",
     "name": "FlatGeoBuf",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["FlatGeoBuf"]
+    "description": "FlatGeoBuf-首页",
+    "tag": [
+      "FlatGeoBuf",
+      "GeoBuf",
+      "Protobuf"
+    ]
   },
   {
     "path": "https://github.com/mapbox/vector-tile-spec",
     "name": "MVT-Standards",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["MVT","Standards"]
+    "description": "MVT-标准",
+    "tag": [
+      "MVT",
+      "Standards"
+    ]
   },
   {
     "path": "https://docs.mapbox.com/data/tilesets/guides/vector-tiles-standards/",
     "name": "MVT-Standards",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["MVT","Standards"]
+    "description": "MVT-标准",
+    "tag": [
+      "MVT",
+      "Standards"
+    ]
   },
   {
     "path": "https://www.cogeo.org/",
     "name": "COG-Home",
     "imgPath": "https://www.cogeo.org/images/logo/COG_Alt_Logo.png",
-    "description": "",
-    "tag":["COG"]
+    "description": "COG-首页",
+    "tag": [
+      "COG",
+      "GeoTif"
+    ]
   },
   {
     "path": "https://github.com/mapbox/mbtiles-spec",
     "name": "MBTiles-Standards",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["MBTiles","Standards"]
+    "description": "MBTiles-标准",
+    "tag": [
+      "MBTiles",
+      "Standards"
+    ]
   },
   {
     "path": "https://www.esri.com/content/dam/esrisites/sitecore-archive/Files/Pdfs/library/whitepapers/pdfs/shapefile.pdf",
     "name": "ShapeFile-Standards",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/10007/10007114.png",
-    "description": "",
-    "tag":["ShapeFile","Standards"]
+    "description": "ShapeFile-标准",
+    "tag": [
+      "ShapeFile",
+      "Standards"
+    ]
   },
   {
     "path": "https://github.com/mapbox/earcut",
     "name": "earcut",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "耳切法",
-    "tag":["计算几何"]
+    "tag": [
+      "algorithm"
+    ]
   },
   {
     "path": "https://github.com/mapbox/polylabel",
     "name": "polylabel",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "计算面的中心",
-    "tag":["计算几何"]
+    "tag": [
+      "algorithm"
+    ]
   },
   {
     "path": "https://github.com/huifer/planar_algorithm",
     "name": "planar_algorithm",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "GIS算法demo",
-    "tag":["计算几何"]
+    "tag": [
+      "algorithm"
+    ]
   },
   {
     "path": "https://github.com/kungfoo/geohash-java",
     "name": "GeoHash",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Spatial Index","GeoHash"]
+    "description": "GeoHash-JAVA实现",
+    "tag": [
+      "Spatial Index",
+      "GeoHash"
+    ]
   },
   {
     "path": "https://github.com/eurostat/GridMaker",
     "name": "GridMaker",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Spatial Index","GridMaker"]
+    "description": "Grid-JAVA实现",
+    "tag": [
+      "Spatial Index",
+      "GridMaker"
+    ]
   },
   {
     "path": "https://github.com/stumpyfr/quadkey",
     "name": "QuadKey",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Spatial Index","QuadKey"]
+    "description": "QuadKey-JS实现",
+    "tag": [
+      "Spatial Index",
+      "QuadKey"
+    ]
   },
   {
     "path": "https://github.com/thegeekyasian/geo-assist",
     "name": "geo-assist",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Spatial Index","KD-Tree"]
+    "description": "KD-Tree-JAVA实现",
+    "tag": [
+      "Spatial Index",
+      "KD-Tree"
+    ]
   },
   {
     "path": "https://www.ogc.org/",
     "name": "OGC-Home",
     "imgPath": "https://www.ogc.org/wp-content/uploads/2023/03/OGC-1.svg",
-    "description": "",
-    "tag":["OGC"]
+    "description": "OGC-首页",
+    "tag": [
+      "OGC"
+    ]
   },
   {
     "path": "https://www.ogc.org/standards/",
     "name": "OGC-Standards",
     "imgPath": "https://www.ogc.org/wp-content/uploads/2023/03/OGC-1.svg",
-    "description": "",
-    "tag":["OGC","Standards"]
+    "description": "OGC-标准",
+    "tag": [
+      "OGC",
+      "Standards"
+    ]
   },
   {
     "path": "https://ogcapi.ogc.org/",
     "name": "OGC-API",
     "imgPath": "https://www.ogc.org/wp-content/uploads/2023/03/OGC-1.svg",
-    "description": "",
-    "tag":["OGC"]
+    "description": "OGC-文档",
+    "tag": [
+      "OGC"
+    ]
   },
   {
     "path": "https://github.com/opengeospatial",
     "name": "OGC-GitHub",
     "imgPath": "https://www.ogc.org/wp-content/uploads/2023/03/OGC-1.svg",
-    "description": "",
-    "tag":["OGC"]
+    "description": "OGC-GitHub",
+    "tag": [
+      "OGC"
+    ]
   },
   {
     "path": "https://opengeospatial.github.io/e-learning/",
     "name": "OGC-Doc",
     "imgPath": "https://www.ogc.org/wp-content/uploads/2023/03/OGC-1.svg",
-    "description": "",
-    "tag":["OGC"]
+    "description": "OGC-文档",
+    "tag": [
+      "OGC"
+    ]
   },
   {
     "path": "https://github.com/geoserver/geoserver",
     "name": "GeoServer",
     "imgPath": "https://github.com/geoserver/geoserver/raw/main/doc/en/themes/geoserver/static/GeoServer_500.png",
-    "description": "",
-    "tag":["GIS Server","GeoServer"]
+    "description": "GeoServer-首页",
+    "tag": [
+      "GIS Server",
+      "GeoServer"
+    ]
   },
   {
     "path": "https://github.com/geosolutions-it/geoserver-manager",
     "name": "GeoServer-manager",
     "imgPath": "https://www.ogc.org/wp-content/uploads/2023/03/OGC-1.svg",
-    "description": "",
-    "tag":["GIS Server","GeoServer"]
+    "description": "GeoServer-RESTAPI",
+    "tag": [
+      "GIS Server",
+      "GeoServer"
+    ]
   },
   {
     "path": "https://github.com/ngageoint/elasticgeo",
     "name": "GeoServer-ElasticsearchIndex",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["GIS Server","GeoServer"]
+    "description": "GeoServer-发布Elasticsearch数据",
+    "tag": [
+      "GIS Server",
+      "GeoServer"
+    ]
   },
   {
     "path": "https://github.com/GeoWebCache/geowebcache",
     "name": "GeoWebCache",
     "imgPath": "https://avatars.githubusercontent.com/u/422721?s=200&v=4",
-    "description": "",
-    "tag":["GISServer","GeoServer","GeoWebCache"]
+    "description": "GeoWebCache-首页",
+    "tag": [
+      "GISServer",
+      "GeoServer",
+      "GeoWebCache"
+    ]
   },
   {
     "path": "https://github.com/DenisCarriere/global-mercator",
     "name": "global-mercator",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "Tile-Coordinate-Transform",
-    "tag":["Coordinate Transform"]
-  },{
-  "path": "https://github.com/kamiaki/GeoCRSutil/tree/master",
-  "name": "GeoCRSutil",
-  "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-  "description": "",
-  "tag":["Coordinate Transform"]
-},
+    "description": "TMS坐标转换",
+    "tag": [
+      "Coordinate Transform"
+    ]
+  },
+  {
+    "path": "https://github.com/kamiaki/GeoCRSutil/tree/master",
+    "name": "GeoCRSutil",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "通用坐标转换",
+    "tag": [
+      "Coordinate Transform"
+    ]
+  },
   {
     "path": "https://github.com/locationtech/proj4j",
     "name": "proj4j",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Coordinate Transform"]
+    "description": "通用坐标转换",
+    "tag": [
+      "Coordinate Transform"
+    ]
   },
   {
     "path": "https://github.com/yageek/lambert-java",
     "name": "lambert-java",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Coordinate Transform"]
+    "description": "Lambert转WGS84",
+    "tag": [
+      "Coordinate Transform"
+    ]
   },
   {
     "path": "https://github.com/RomanIakovlev/timeshape",
     "name": "timeshape",
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
-    "description": "",
-    "tag":["Coordinate Transform"]
+    "description": "坐标计算时区",
+    "tag": [
+      "Coordinate Transform"
+    ]
   },
   {
     "path": "https://gis.stackexchange.com/",
     "name": "gis.stackexchange",
     "imgPath": "https://cdn.sstatic.net/Sites/gis/Img/logo.svg?v=524ba4e921b1",
-    "description": "",
-    "tag":["GIS论坛"]
+    "description": "GIS论坛",
+    "tag": [
+      "GIS论坛"
+    ]
   }
 ]

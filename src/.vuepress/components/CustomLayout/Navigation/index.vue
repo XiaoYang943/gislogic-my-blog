@@ -81,7 +81,7 @@ import Navbar from 'vuepress-theme-hope/modules/navbar/components/Navbar.js';
 import jsonData from '../../../public/navigation.json'
 import {clone} from "lodash-es"
 import {getUuid} from "../../../utils";
-// TODO: tags排序
+// TODO: tag搜索
 type Tag = {
   name: string,
   id: string,
@@ -255,5 +255,6 @@ watch(
   }
 
   margin: 0 20px 20px 0;
+  cursor: pointer;
 }
 </style>

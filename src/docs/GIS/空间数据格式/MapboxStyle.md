@@ -6,7 +6,7 @@ category:
   - MapboxStyle
 ---
 
-::: tips
+::: tip
 - 本文是对[MapboxStyle standards v14.5.2](https://docs.mapbox.com/style-spec/reference/)的整理，主要是整理校验规则
   - warning：仅做提示，不报错
   - caution：报错
@@ -102,7 +102,7 @@ category:
 #### volatile
 ## Sprite
 
-::: tips
+::: tip
 - 是否做该文件的校验
 :::
 
@@ -216,7 +216,7 @@ category:
 
 ## 模板(复制用)
 
-::: tips
+::: tip
 
 :::
 

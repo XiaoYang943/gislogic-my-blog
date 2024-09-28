@@ -165,6 +165,39 @@ const onChange = (tagId: string) => {
     data.selectedTagId.push(tagId)
   }
 }
+
+/**
+ * 按照name属性a-z-中文的规则排序数组
+ * @param arr
+ */
+function sortArrayByName(arr: Array<{ name: string }>): Array<{ name: string }> {
+  return arr.sort((a, b) => {
+    // 判断字符串是否以中文开头
+    function startsWithChinese(str: string): boolean {
+      const firstCharCode = str.charCodeAt(0);
+      return firstCharCode >= 0x4E00 && firstCharCode <= 0x9FA5;
+    }
+
+    // 如果两个字符串都不以中文开头，则按英文排序
+    if (!startsWithChinese(a.name) && !startsWithChinese(b.name)) {
+      return a.name.localeCompare(b.name);
+    }
+
+    // 如果a以中文开头，b不以中文开头，则b在前
+    if (startsWithChinese(a.name) && !startsWithChinese(b.name)) {
+      return 1;
+    }
+
+    // 如果b以中文开头，a不以中文开头，则a在前
+    if (!startsWithChinese(a.name) && startsWithChinese(b.name)) {
+      return -1;
+    }
+
+    // 如果两个字符串都以中文开头，则按英文排序
+    return a.name.localeCompare(b.name);
+  });
+}
+
 // 根据默认card-json计算默认tag列表
 const getDefaultTagArr = () => {
   let tempTagArr = [] // 去重后的tagName
@@ -175,8 +208,6 @@ const getDefaultTagArr = () => {
       }
     })
   })
-
-  tempTagArr = tempTagArr.concat([]).sort((a, b) => a.localeCompare(b))  // 英文a-z排序
 
   let tagSet = []
   tempTagArr.forEach((tagName) => {
@@ -189,7 +220,7 @@ const getDefaultTagArr = () => {
   return tagSet
 }
 onMounted(() => {
-  data.cardList = jsonData
+  data.cardList = sortArrayByName(jsonData)
   data.tagList = getDefaultTagArr()
   data.cardListCloned = clone(data.cardList)
 })

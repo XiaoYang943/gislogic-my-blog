@@ -54,6 +54,15 @@
     ]
   },
   {
+    "path": "https://docs.geotools.org/latest/javadocs/index.html",
+    "name": "GeoTools-API",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "GeoTools-API文档",
+    "tag": [
+      "GeoTools"
+    ]
+  },
+  {
     "path": "https://turfjs.org/",
     "name": "Turf.JS",
     "imgPath": "https://turfjs.org/img/logo.svg",
@@ -226,7 +235,7 @@
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "MVT-标准",
     "tag": [
-      "MVT",
+      "VectorTile",
       "Standards"
     ]
   },
@@ -236,7 +245,7 @@
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "MVT-标准",
     "tag": [
-      "MVT",
+      "VectorTile",
       "Standards"
     ]
   },
@@ -415,9 +424,20 @@
   },
   {
     "path": "https://github.com/GeoWebCache/geowebcache",
-    "name": "GeoWebCache",
+    "name": "GeoWebCache-Home",
     "imgPath": "https://avatars.githubusercontent.com/u/422721?s=200&v=4",
     "description": "GeoWebCache-首页",
+    "tag": [
+      "GISServer",
+      "GeoServer",
+      "GeoWebCache"
+    ]
+  },
+  {
+    "path": "https://geowebcache.osgeo.org/docs/current/index.html",
+    "name": "GeoWebCache-Docs",
+    "imgPath": "https://avatars.githubusercontent.com/u/422721?s=200&v=4",
+    "description": "GeoWebCache-文档",
     "tag": [
       "GISServer",
       "GeoServer",
@@ -476,6 +496,51 @@
     "description": "GIS论坛",
     "tag": [
       "GIS论坛"
+    ]
+  },
+  {
+    "path": "https://github.com/networknt/json-schema-validator",
+    "name": "json-schema-validator",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "JSON规则校验-JAVA实现",
+    "tag": [
+      "JSON"
+    ]
+  },
+  {
+    "path": "https://json-schema.apifox.cn/",
+    "name": "json-schema",
+    "imgPath": "https://json-schema.apifox.cn/images/logo.svg",
+    "description": "JSON Schema规范",
+    "tag": [
+      "JSON","Standards"
+    ]
+  },
+  {
+    "path": "https://openmaptiles.org/",
+    "name": "openmaptiles",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "OSM矢量瓦片服务",
+    "tag": [
+      "OSM","VectorTile"
+    ]
+  },
+  {
+    "path": "https://docs.mapbox.com/style-spec/reference/",
+    "name": "mapbox-style",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "Mapbox样式标准",
+    "tag": [
+      "VectorTile","Style","Standards"
+    ]
+  },
+  {
+    "path": "https://github.com/geostyler/geostyler",
+    "name": "geostyler",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "样式解析与转换-JS实现",
+    "tag": [
+      "Style"
     ]
   }
 ]

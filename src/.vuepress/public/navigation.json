@@ -36,6 +36,15 @@
     ]
   },
   {
+    "path": "https://gdal.org/en/stable/programs/index.html",
+    "name": "GDAL-Doc",
+    "imgPath": "https://gdal.org/_static/gdalicon.png",
+    "description": "GDAL-文档",
+    "tag": [
+      "GDAL"
+    ]
+  },
+  {
     "path": "https://github.com/locationtech/jts",
     "name": "JTS",
     "imgPath": "https://github.com/locationtech/jts/raw/master/locationtech_mark.png",
@@ -531,7 +540,7 @@
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "Mapbox样式标准",
     "tag": [
-      "VectorTile","Style","Standards"
+      "VectorTile","MapboxStyle","Standards"
     ]
   },
   {
@@ -540,7 +549,97 @@
     "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
     "description": "样式解析与转换-JS实现",
     "tag": [
-      "Style"
+      "MapboxStyle","SLD","LYR"
+    ]
+  },
+  {
+    "path": "https://pmtiles.io/",
+    "name": "pmtiles",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "在线预览pmtiles",
+    "tag": [
+      "pmtiles"
+    ]
+  },
+  {
+    "path": "https://github.com/maplibre/martin",
+    "name": "martin",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "矢量瓦片服务器",
+    "tag": [
+      "martin","VectorTile"
+    ]
+  },
+  {
+    "path": "https://github.com/dechristopher/lod",
+    "name": "lod",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "瓦片缓存器",
+    "tag": [
+      "VectorTile","RasterTile","Martin","LRU"
+    ]
+  },
+  {
+    "path": "https://github.com/maplibre/maputnik",
+    "name": "maputnik",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "MapboxStyle配图",
+    "tag": [
+      "maplibre","maputnik","MapboxStyle"
+    ]
+  },
+  {
+    "path": "https://parquet-viewer.xiangpeng.systems/",
+    "name": "parquet-viewer",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "在线预览parquet",
+    "tag": [
+      "parquet"
+    ]
+  },
+  {
+    "path": "https://geoparquet.org/",
+    "name": "geoparquet-home",
+    "imgPath": "https://geoparquet.org/_astro/parquet.DAWCzM4I.svg",
+    "description": "GeoParquet",
+    "tag": [
+      "GeoParquet"
+    ]
+  },
+  {
+    "path": "https://geoarrow.org/",
+    "name": "geoarrow-home",
+    "imgPath": "https://geoarrow.org/geoarrow_logo.png",
+    "description": "GeoArrow",
+    "tag": [
+      "GeoArrow"
+    ]
+  },
+  {
+    "path": "https://libgeos.org/specifications/wkb/",
+    "name": "wkb-home",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "WKB",
+    "tag": [
+      "WKB"
+    ]
+  },
+  {
+    "path": "https://github.com/davidmoten/rtree",
+    "name": "rtree-java",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "R树Java实现",
+    "tag": [
+      "R-Tree","Spatial Index","空间索引"
+    ]
+  },
+  {
+    "path": "https://docs.mapbox.com/mapbox-tiling-service/raster/",
+    "name": "mapbox-tiling-service",
+    "imgPath": "https://cdn-icons-png.flaticon.com/128/2111/2111432.png",
+    "description": "MRT",
+    "tag": [
+      "MRT","Mapbox Raster Tile"
     ]
   }
 ]
